@@ -27,12 +27,16 @@ gratuitas para artistas. Publicado em https://acuca-sp.github.io a partir da bra
 | `assets/js/zip.js` | ZIP sem compressão usado no "Baixar todas" |
 | `assets/img/exemplos/` | Pares de antes e depois dos prompts (`<id>-antes.jpg`, `<id>-depois-<ia>.jpg`), com exemplos de Gemini e ChatGPT |
 | `tests/validar-prompts.mjs` | Validação do `prompts.json` (roda também no GitHub Actions) |
+| `tests/marca-dagua.html` | Teste da marca d'água no navegador: mexe em todas as opções e confere os pixels das fotos baixadas (70 verificações) |
+| `assets/img/marca-dagua/` | Exemplos da página inicial, gerados na própria ferramenta |
 
 ## Verificar antes de publicar
 1. `node tests/validar-prompts.mjs` precisa terminar com ✓.
 2. Servir localmente: `python3 -m http.server 8790` na raiz do repositório e abrir http://localhost:8790.
 3. Conferir no navegador a página alterada, no desktop e em 375px de largura, e o console sem erros.
-   Na marca d'água: carregar uma foto, trocar os cinco padrões e baixar uma foto e o .zip.
+4. Mexeu na marca d'água? Abrir http://localhost:8790/tests/marca-dagua.html com a aba visível e esperar o
+   resumo "Tudo OK". O resultado também fica em `window.__resultado` (`{ total, falhas }`) para agentes lerem.
+   Acrescente verificações lá ao criar opção nova.
 
 ## Skills e agents
 - `.claude/skills/novo-prompt`: adicionar ou editar uma direção de arte no guia.

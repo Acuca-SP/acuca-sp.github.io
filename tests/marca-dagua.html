@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste da marca d'água</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { font: 14px/1.5 ui-monospace, Menlo, monospace; margin: 16px; background: #f4f1ec; color: #222; }
+    h1 { font: 700 18px system-ui, sans-serif; }
+    #resumo { font-weight: 700; padding: 8px 12px; border-radius: 6px; display: inline-block; background: #ddd; }
+    #resumo.ok { background: #dff3e4; color: #1d6b34; } #resumo.falha { background: #fde2e4; color: #9b1c2c; }
+    ol { padding-left: 22px; } li.ok::marker { color: #1d6b34; } li.falha { color: #9b1c2c; font-weight: 700; }
+    iframe { width: 1280px; height: 900px; border: 1px solid #ccc; margin-top: 16px; background: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Teste automático da ferramenta de marca d'água</h1>
+  <p>Abre <code>/marca-dagua/</code> abaixo, mexe em todas as opções e confere os pixels das fotos geradas. Nada sai do navegador.</p>
+  <p id="resumo">Rodando…</p>
+  <ol id="lista"></ol>
+  <iframe id="app" title="Ferramenta em teste"></iframe>
+  <script src="marca-dagua-teste.js"></script>
+</body>
+</html>

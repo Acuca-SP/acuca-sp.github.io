@@ -9,8 +9,8 @@ O push na `main` publica o site automaticamente (GitHub Pages, sem build). Por i
 
 1. **Validar dados:** `node tests/validar-prompts.mjs` → precisa de ✓.
 2. **Ver localmente:** `python3 -m http.server 8790` na raiz e abrir as páginas alteradas em http://localhost:8790,
-   no desktop e em 375px. Console sem erros. Se mexeu na marca d'água: carregar foto, testar os cinco padrões,
-   baixar uma foto e o .zip.
+   no desktop e em 375px. Console sem erros. Se mexeu na marca d'água: abra
+   http://localhost:8790/tests/marca-dagua.html e espere "Tudo OK" (ou leia `window.__resultado`).
 3. **Commit:** mensagem curta em português dizendo o que mudou, por exemplo `Marca d'água: padrão "cantos"`.
    Nunca inclua fotos de pessoas sem autorização nem arquivos fora do site (rascunhos, `.DS_Store`).
 4. **Push:** `git push`.

@@ -27,6 +27,7 @@
   let fotos = [];   // { nome, img, w, h, url }
   let atual = -1;
   let logo = null;  // { img, w, h, url, nome }
+  let aviso = '';   // fotos que não abriram na última leva
 
   // ---------- configurações (formulário <-> objeto) ----------
   const ler = () => {
@@ -215,9 +216,16 @@
     if (tela.width !== W || tela.height !== H) { tela.width = W; tela.height = H; }
     const temMarca = render(ctx, W, H, foto.img, s);
     status.textContent = `${fotos.length} ${fotos.length === 1 ? 'foto' : 'fotos'} · esta: ${foto.nome}, ${foto.w} × ${foto.h} px` +
-      (temMarca ? '' : ' · preencha o @, o site ou o nome para ver a marca d\'água');
+      (temMarca ? '' : ' · preencha o @, o site ou o nome para ver a marca d\'água') + (aviso ? ` · ${aviso}` : '');
   };
-  const agendar = () => { if (!pendente) { pendente = true; requestAnimationFrame(desenhar); } };
+  // redesenha no próximo quadro; o setTimeout cobre abas em segundo plano, onde o navegador pausa os quadros
+  const agendar = () => {
+    if (pendente) return;
+    pendente = true;
+    const uma = () => { if (pendente) desenhar(); };
+    requestAnimationFrame(uma);
+    setTimeout(uma, 100);
+  };
 
   const visibilidade = () => {
     const s = ler();
@@ -234,7 +242,8 @@
   const abrirImagem = (file) => new Promise((ok, erro) => {
     const url = URL.createObjectURL(file);
     const img = new Image();
-    img.onload = () => ok({ nome: file.name || 'foto', img, w: img.naturalWidth, h: img.naturalHeight, url });
+    // SVG sem largura/altura declaradas chega com tamanho 0 em alguns navegadores: usa um quadrado
+    img.onload = () => ok({ nome: file.name || 'foto', img, w: img.naturalWidth || 300, h: img.naturalHeight || 300, url });
     img.onerror = () => { URL.revokeObjectURL(url); erro(new Error(file.name)); };
     img.src = url;
   });
@@ -284,12 +293,12 @@
       try { fotos.push(await abrirImagem(f)); } catch { falhas.push(f.name); }
     }
     if (fotos.length > antes) atual = antes; // mostra a primeira das fotos novas
+    // o aviso fica até a próxima leva de fotos (a prévia reescreve o status e o repete)
+    aviso = falhas.length ? `Não consegui abrir: ${falhas.join(', ')}. Se for HEIC do iPhone, exporte como JPG ` +
+      '(ou, no iPhone, em Ajustes → Câmera → Formatos, escolha "Mais compatível").' : '';
     desenharMiniaturas();
+    if (aviso) status.textContent = aviso;
     agendar();
-    if (falhas.length) {
-      status.textContent = `Não consegui abrir: ${falhas.join(', ')}. Se for HEIC do iPhone, exporte como JPG ` +
-        '(ou, no iPhone, em Ajustes → Câmera → Formatos, escolha "Mais compatível").';
-    }
   };
 
   entrada.addEventListener('change', () => { adicionar(entrada.files); entrada.value = ''; });

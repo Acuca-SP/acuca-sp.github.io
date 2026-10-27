@@ -15,7 +15,8 @@ disponível na sessão.
 2. **Guia de prompts:** `node tests/validar-prompts.mjs` passa; os cartões aparecem; cada filtro mostra só as categorias
    certas; digitar num campo `[VARIÁVEL]` atualiza o texto; "Copiar prompt" copia o texto com os valores preenchidos;
    `/prompts/#<id>` rola até o cartão.
-3. **Marca d'água:** carregar duas fotos (uma retrato e uma paisagem); preencher @, site e nome; testar os padrões
+3. **Marca d'água:** primeiro rode `/tests/marca-dagua.html` (aba visível) e relate as falhas de `window.__resultado`.
+   Depois, à mão: carregar duas fotos (uma retrato e uma paisagem); preencher @, site e nome; testar os padrões
    Único (as 9 posições), Quatro cantos, Mosaico, Diagonal (a inclinação vai para -30°) e Faixa; mudar cor, opacidade,
    sombra, contorno e tarja; adicionar e remover um logo PNG; recarregar a página e conferir que as opções voltaram;
    "Restaurar padrão" limpa tudo. Baixar uma foto e o .zip e conferir que o arquivo baixado tem o tamanho original

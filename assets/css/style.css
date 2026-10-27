@@ -95,6 +95,12 @@ section { padding: 72px 0; }
 .escura .cartao { background: var(--grafite); color: var(--branco); box-shadow: none; }
 .cartao.ferramenta { display: flex; flex-direction: column; border-top: 4px solid var(--vermelho); }
 .cartao.ferramenta p { flex: 1; }
+.exemplos-marca figure { margin: 0; }
+.exemplos-marca a { display: block; border-radius: var(--raio); overflow: hidden; background: var(--gelo); }
+.exemplos-marca img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .2s; }
+.exemplos-marca a:hover img { transform: scale(1.03); }
+.exemplos-marca figcaption { font-size: 14px; margin-top: 8px; }
+@media (max-width: 560px) { .exemplos-marca { grid-template-columns: 1fr 1fr; gap: 14px; } }
 
 .numero { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3rem); color: var(--vermelho); line-height: 1; }
 .numero + p { margin-top: 8px; }
