@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa da ExpoCannabis 2026 · ACUCARTE</title>
+  <meta name="description" content="Mapa dos setores da ExpoCannabis Brasil 2026 no São Paulo Expo, com a lista oficial de expositores por pavilhão e estande, para artistas se localizarem antes da feira.">
+  <link rel="icon" href="../assets/img/simbolo-acuca.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,600;1,700&family=Montserrat:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css?v=202610271545">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="../" target="_blank" rel="noopener"><img src="../assets/img/logo-acucarte-claro.png" alt="ACUCARTE" width="910" height="122"></a>
+      <nav aria-label="Principal">
+        <a href="../#acuca" target="_blank" rel="noopener">ACuCa</a>
+        <a href="../#acucarte" target="_blank" rel="noopener">ACUCARTE</a>
+        <a href="../#ferramentas" target="_blank" rel="noopener">Ferramentas</a>
+        <a href="../prompts/" target="_blank" rel="noopener">Guia de prompts</a>
+        <a href="../marca-dagua/" target="_blank" rel="noopener">Marca d'água</a>
+        <a href="./" aria-current="page" target="_blank" rel="noopener">Mapa da Expo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="cabeca">
+      <div class="wrap">
+        <h1>Mapa da ExpoCannabis 2026</h1>
+        <p><strong>20, 21 e 22 de novembro de 2026</strong>, no São Paulo Expo (Pavilhões 7 e 8 e área externa). Veja como a feira se divide, quem está em cada setor e procure qualquer expositor pelo nome, pelo @ ou pelo número do estande.</p>
+      </div>
+    </div>
+
+    <section style="padding-top:32px">
+      <div class="wrap">
+        <p class="aviso" id="aviso-planta"><strong>Mapa esquemático, fora de escala.</strong> A organização ainda não publicou a planta baixa oficial. Os setores e os números de estande vêm da <a href="https://expocannabisbrasil.com/expositores/" target="_blank" rel="noopener">lista oficial de expositores</a>, mas a posição de cada bloco no desenho é ilustrativa. Quando a planta oficial sair, ela entra aqui.</p>
+        <p class="aviso" id="estande-acucarte"></p>
+
+        <div class="expo">
+          <div>
+            <div class="planta" role="group" aria-label="Setores da ExpoCannabis 2026 no São Paulo Expo (esquema)">
+              <div class="pavilhao p7">
+                <p class="nome-pav">Pavilhão 7</p>
+                <button type="button" class="setor" data-setor="medicinal"><strong>Medicinal</strong><span class="conta"></span></button>
+                <button type="button" class="setor" data-setor="plural-a"><strong>Plural A</strong><span class="conta"></span></button>
+                <button type="button" class="setor" data-setor="plural-b"><strong>Plural B</strong><span class="conta"></span></button>
+                <button type="button" class="setor" data-setor="plural-c"><strong>Plural C</strong><span class="conta"></span></button>
+              </div>
+              <button type="button" class="setor cultural" data-setor="cultural"><strong>Pavilhão Cultural</strong><span class="conta"></span><span class="conta">setor das artes</span></button>
+              <button type="button" class="setor p8" data-setor="cbh"><strong>Pavilhão 8</strong><span class="conta">Business Hub · 18 nov</span></button>
+              <button type="button" class="setor externa" data-setor="externa"><strong>Área Externa</strong><span class="conta"></span></button>
+            </div>
+            <p class="dica">Toque num setor para ver quem está nele. Toque de novo para ver todos.</p>
+          </div>
+
+          <aside class="cartao" id="setor-info" aria-live="polite"></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="branca">
+      <div class="wrap">
+        <p class="rotulo">Lista oficial</p>
+        <h2>Expositores</h2>
+        <hr class="fio">
+        <div class="busca-expo">
+          <div class="campo"><label for="busca">Procurar por nome, @ ou estande</label><input type="search" id="busca" placeholder="Ex.: HippieBong, @papelitobrasil ou 229"></div>
+          <div class="filtros" id="filtros" role="group" aria-label="Filtrar por setor"></div>
+        </div>
+        <p class="mudo" id="resumo" role="status"></p>
+        <ul class="lista-expo" id="lista"></ul>
+        <p class="mudo" id="fonte" style="margin-top:24px"></p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="rotulo">Antes de ir</p>
+        <h2>Como chegar e se organizar</h2>
+        <hr class="fio">
+        <div class="grade g3">
+          <article class="cartao">
+            <h3>Endereço</h3>
+            <p>São Paulo Expo · Rodovia dos Imigrantes, km 1,5, Água Funda, São Paulo.</p>
+            <p><a href="https://www.saopauloexpo.com.br/pt/localizacao/" target="_blank" rel="noopener">Como chegar, no site do São Paulo Expo</a></p>
+          </article>
+          <article class="cartao">
+            <h3>Transporte</h3>
+            <p>Metrô <strong>Jabaquara</strong> (linha 1, azul). De lá são cerca de 900 m a pé, ou o ônibus <strong>605A-10</strong> (Centro Paralímpico), na plataforma A do terminal da EMTU. Há estacionamento coberto e bicicletário gratuito (leve o cadeado).</p>
+          </article>
+          <article class="cartao">
+            <h3>Ingressos e programação</h3>
+            <p>Ingressos na Sympla. Palestras, oficinas, shows e horários ficam no site oficial.</p>
+            <div class="botoes" style="margin-top:12px">
+              <a class="btn sm" href="https://www.sympla.com.br/evento/expocannabis-brasil-2026-4-edicao/3217542" target="_blank" rel="noopener">Ingressos</a>
+              <a class="btn sm contorno" href="https://expocannabisbrasil.com/" target="_blank" rel="noopener">Site oficial</a>
+            </div>
+          </article>
+        </div>
+        <h3 style="margin-top:40px">Dicas para artistas</h3>
+        <ul>
+          <li>O <strong>Pavilhão Cultural</strong> concentra arte em vidro, artesanato, moda e cultura. É onde vale começar a circular e fazer contatos.</li>
+          <li>Leve fotos dos trabalhos já com a sua marca d'água (<a href="../marca-dagua/" target="_blank" rel="noopener">ferramenta gratuita</a>) e o @ bem à vista no estande ou no cartão.</li>
+          <li>Anote o número dos estandes que quer visitar: nesta página, procure pelo nome ou pelo @.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap">
+      <img src="../assets/img/logo-acuca-branco.png" alt="ACuCa-SP" width="852" height="634">
+      <div>
+        <a href="https://instagram.com/acucasp" target="_blank" rel="noopener">@acucasp</a> · <a href="https://instagram.com/acucarte_acuca" target="_blank" rel="noopener">@acucarte_acuca</a> ·
+        <a href="https://www.acucasp.org.br" target="_blank" rel="noopener">acucasp.org.br</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/expocannabis.js?v=202610271545" defer></script>
+</body>
+</html>

@@ -10,7 +10,7 @@ Sirva o site com `python3 -m http.server 8790` na raiz do repositório (se ainda
 disponível na sessão.
 
 ## Roteiro
-1. **Todas as páginas** (`/`, `/prompts/`, `/marca-dagua/`, `/404.html`): carregam sem erro no console, links do menu
+1. **Todas as páginas** (`/`, `/prompts/`, `/marca-dagua/`, `/expocannabis/`, `/404.html`): carregam sem erro no console, links do menu
    funcionam, sem rolagem horizontal em 375px de largura.
 2. **Guia de prompts:** `node tests/validar-prompts.mjs` passa; os cartões aparecem; cada filtro mostra só as categorias
    certas; digitar num campo `[VARIÁVEL]` atualiza o texto; "Copiar prompt" copia o texto com os valores preenchidos;
@@ -21,6 +21,7 @@ disponível na sessão.
    sombra, contorno e tarja; adicionar e remover um logo PNG; recarregar a página e conferir que as opções voltaram;
    "Restaurar padrão" limpa tudo. Baixar uma foto e o .zip e conferir que o arquivo baixado tem o tamanho original
    da foto e a marca na mesma posição da prévia.
-4. **Privacidade:** na aba de rede, nenhuma requisição leva a foto (só fontes do Google e arquivos do próprio site).
+4. **Mapa da Expo:** cada setor filtra a lista e mostra o cartão do setor; tocar de novo volta a todos; a busca acha por nome, @ e número ("1" acha o estande 001).
+5. **Privacidade:** na aba de rede, nenhuma requisição leva a foto (só fontes do Google e arquivos do próprio site).
 
 Relate em lista: o que passou, o que falhou (com passo a passo) e prints quando ajudar.

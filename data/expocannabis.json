@@ -1,0 +1,1155 @@
+{
+ "evento": "ExpoCannabis Brasil 2026 (4ª edição)",
+ "datas": "20, 21 e 22 de novembro de 2026",
+ "local": "São Paulo Expo · Rodovia dos Imigrantes, km 1,5, Água Funda, São Paulo",
+ "site": "https://expocannabisbrasil.com/",
+ "ingressos": "https://www.sympla.com.br/evento/expocannabis-brasil-2026-4-edicao/3217542",
+ "fonte_expositores": "https://expocannabisbrasil.com/expositores/",
+ "atualizado_em": "2026-10-27",
+ "planta_oficial": null,
+ "estande_acucarte": null,
+ "setores": {
+  "medicinal": {
+   "nome": "Medicinal",
+   "onde": "Pavilhão 7",
+   "descricao": "Associações de pacientes, saúde e cannabis medicinal."
+  },
+  "plural-a": {
+   "nome": "Plural A",
+   "onde": "Pavilhão 7",
+   "descricao": "Marcas, tabacaria e acessórios: a diversidade além do convencional."
+  },
+  "plural-b": {
+   "nome": "Plural B",
+   "onde": "Pavilhão 7",
+   "descricao": "Marcas, cultivo, nutrientes e entidades do setor."
+  },
+  "plural-c": {
+   "nome": "Plural C",
+   "onde": "Pavilhão 7",
+   "descricao": "Cultivo, extração, equipamentos e iluminação."
+  },
+  "cultural": {
+   "nome": "Pavilhão Cultural",
+   "onde": "Pavilhão Cultural",
+   "descricao": "Arte, vidro, artesanato, moda e cultura canábica. É o setor mais próximo do trabalho dos artistas."
+  },
+  "externa": {
+   "nome": "Área Externa",
+   "onde": "Área Externa",
+   "descricao": "Arquibancada, lotes ao ar livre e ativações de marca."
+  },
+  "cbh": {
+   "nome": "Cannabis Business Hub",
+   "onde": "Pavilhão 8",
+   "descricao": "Rodada de negócios em 18 de novembro, das 14h às 19h, antes da feira."
+  }
+ },
+ "expositores": [
+  {
+   "nome": "100THC",
+   "setor": "cultural",
+   "estande": "296, 297, 298, 299",
+   "instagram": "@100thc.stl"
+  },
+  {
+   "nome": "4:20 Free Time",
+   "setor": "plural-a",
+   "estande": "092, 093, 094, 112, 113, 114"
+  },
+  {
+   "nome": "6 Stars Extract",
+   "setor": "plural-c",
+   "estande": "172",
+   "instagram": "@6starsbrasil"
+  },
+  {
+   "nome": "A Gloriosa Pimenta",
+   "setor": "cultural",
+   "estande": "215, 216",
+   "instagram": "@a_gloriosa_pimenta"
+  },
+  {
+   "nome": "A Piteira",
+   "setor": "plural-c",
+   "estande": "162",
+   "instagram": "@a_piteira"
+  },
+  {
+   "nome": "ABCAM Semiárido",
+   "setor": "medicinal",
+   "estande": "120",
+   "instagram": "@abcamsemiarido"
+  },
+  {
+   "nome": "ABCCI - Associação Brasileira de Cannabis e Cânhamo Industrial",
+   "setor": "plural-b",
+   "estande": "098, 108",
+   "instagram": "@abccioficial"
+  },
+  {
+   "nome": "Abduzido",
+   "setor": "plural-a",
+   "estande": "018, 019",
+   "instagram": "@abduzido_abdz"
+  },
+  {
+   "nome": "ABF Genetics",
+   "setor": "cultural",
+   "estande": "257",
+   "instagram": "@abfgenetics"
+  },
+  {
+   "nome": "Abrace Esperança",
+   "setor": "medicinal",
+   "estande": "055",
+   "instagram": "@abraceesperanca"
+  },
+  {
+   "nome": "Ace Rolling",
+   "setor": "plural-a",
+   "estande": "061, 080",
+   "instagram": "@acerolling.official"
+  },
+  {
+   "nome": "Advanced Nutrients",
+   "setor": "plural-b",
+   "estande": "068, 073",
+   "instagram": "@advancednutrientsbrasil"
+  },
+  {
+   "nome": "AFITOCANN",
+   "setor": "plural-b",
+   "estande": "110",
+   "instagram": "@afitocann"
+  },
+  {
+   "nome": "AKSO",
+   "setor": "plural-b",
+   "estande": "042"
+  },
+  {
+   "nome": "APMC",
+   "setor": "medicinal",
+   "estande": "027"
+  },
+  {
+   "nome": "Aptus",
+   "setor": "plural-c",
+   "estande": "173",
+   "instagram": "@aptusholland"
+  },
+  {
+   "nome": "Associação CANNASP",
+   "setor": "cultural",
+   "estande": "295",
+   "instagram": "@losterpenitos"
+  },
+  {
+   "nome": "Associação Liva",
+   "setor": "medicinal",
+   "estande": "024",
+   "instagram": "@liva_brasil"
+  },
+  {
+   "nome": "Associação Pet Cannabis",
+   "setor": "plural-a",
+   "estande": "062",
+   "instagram": "@dr.petcannabisoficial1"
+  },
+  {
+   "nome": "Associação Santo Amor",
+   "setor": "cultural",
+   "estande": "209",
+   "instagram": "@santoamorbr"
+  },
+  {
+   "nome": "Associação Viva Cannabis",
+   "setor": "medicinal",
+   "estande": "001",
+   "instagram": "@vivacannabisorg"
+  },
+  {
+   "nome": "Atami",
+   "setor": "plural-c",
+   "estande": "159",
+   "instagram": "@atami_brasil"
+  },
+  {
+   "nome": "Austral Botanicals",
+   "setor": "medicinal",
+   "estande": "056"
+  },
+  {
+   "nome": "Banza Zmoke",
+   "setor": "cultural",
+   "estande": "206"
+  },
+  {
+   "nome": "BCG 310",
+   "setor": "plural-c",
+   "estande": "166, 167",
+   "instagram": "@bcg.310"
+  },
+  {
+   "nome": "BELLI ROOTS",
+   "setor": "plural-a",
+   "estande": "033"
+  },
+  {
+   "nome": "Bem Bolado",
+   "setor": "plural-b",
+   "estande": "044, Área de Ativação 187",
+   "tambem": "cultural"
+  },
+  {
+   "nome": "Bem Roots",
+   "setor": "cultural",
+   "estande": "206"
+  },
+  {
+   "nome": "Beyou Labs",
+   "setor": "cultural",
+   "estande": "294"
+  },
+  {
+   "nome": "Biobizz",
+   "setor": "plural-c",
+   "estande": "140"
+  },
+  {
+   "nome": "BioCultivo",
+   "setor": "cultural",
+   "estande": "223, 254",
+   "instagram": "@biocultivobrasil"
+  },
+  {
+   "nome": "BlindBeez",
+   "setor": "cultural",
+   "estande": "314, 315, 332, 333",
+   "instagram": "@blindbeez"
+  },
+  {
+   "nome": "BlueLab RMA",
+   "setor": "medicinal",
+   "estande": "086",
+   "instagram": "@bluelab_official"
+  },
+  {
+   "nome": "Blunt Rey",
+   "setor": "cultural",
+   "estande": "249",
+   "instagram": "@bluntreyargentina"
+  },
+  {
+   "nome": "Bob Prensa Rosin",
+   "setor": "plural-c",
+   "estande": "176, 177",
+   "instagram": "@bobprensarosin"
+  },
+  {
+   "nome": "Bombaco",
+   "setor": "externa",
+   "estande": "Arquibancada 1, 2, 3",
+   "instagram": "@bom.baco"
+  },
+  {
+   "nome": "BombFruit",
+   "setor": "cultural",
+   "estande": "208",
+   "instagram": "@bombfruit.ofc"
+  },
+  {
+   "nome": "Boreal Terps",
+   "setor": "cultural",
+   "estande": "260",
+   "instagram": "@borealterps"
+  },
+  {
+   "nome": "Boveda",
+   "setor": "plural-c",
+   "estande": "170",
+   "instagram": "@bovedainc"
+  },
+  {
+   "nome": "Box Tabaco",
+   "setor": "plural-a",
+   "estande": "129, 132"
+  },
+  {
+   "nome": "Brisa Terps",
+   "setor": "cultural",
+   "estande": "282"
+  },
+  {
+   "nome": "BUYCBD.IT",
+   "setor": "medicinal",
+   "estande": "057",
+   "instagram": "@buycbd.it_international"
+  },
+  {
+   "nome": "C-Vault",
+   "setor": "plural-c",
+   "estande": "170"
+  },
+  {
+   "nome": "CALI TERPENES",
+   "setor": "plural-a",
+   "estande": "033"
+  },
+  {
+   "nome": "Cannatrol",
+   "setor": "medicinal",
+   "estande": "117",
+   "instagram": "@cannatrol"
+  },
+  {
+   "nome": "CannaVista",
+   "setor": "plural-c",
+   "estande": "154, 155, 160",
+   "instagram": "@trimming_is_easy"
+  },
+  {
+   "nome": "Carolinha Weed",
+   "setor": "cultural",
+   "estande": "224",
+   "instagram": "@carolinha_weed"
+  },
+  {
+   "nome": "Cereslux",
+   "setor": "cultural",
+   "estande": "286, 287",
+   "instagram": "@cerelux_official"
+  },
+  {
+   "nome": "Cervejaria Hipnose",
+   "setor": "cultural",
+   "estande": "197, 198",
+   "instagram": "@cervejariahipnose"
+  },
+  {
+   "nome": "Cervejaria Lepre",
+   "setor": "cultural",
+   "estande": "238, 239",
+   "instagram": "@ahtriocervejaria"
+  },
+  {
+   "nome": "CFBio",
+   "setor": "plural-a",
+   "estande": "135"
+  },
+  {
+   "nome": "Chef Broccoli",
+   "setor": "plural-a",
+   "estande": "077",
+   "instagram": "@chefbroccoli1"
+  },
+  {
+   "nome": "Chillin",
+   "setor": "plural-c",
+   "estande": "143"
+  },
+  {
+   "nome": "Chocogrower",
+   "setor": "cultural",
+   "estande": "235, 236",
+   "instagram": "@chocogroweroficial"
+  },
+  {
+   "nome": "Cindy Terps",
+   "setor": "cultural",
+   "estande": "221",
+   "instagram": "@cindy.terps"
+  },
+  {
+   "nome": "Club Hempô",
+   "setor": "cultural",
+   "estande": "240",
+   "instagram": "@clubehempo"
+  },
+  {
+   "nome": "Cocada Cremosa",
+   "setor": "cultural",
+   "estande": "289",
+   "instagram": "@cremosacocada"
+  },
+  {
+   "nome": "COFEN",
+   "setor": "plural-a",
+   "estande": "127"
+  },
+  {
+   "nome": "Cogu & Bambu",
+   "setor": "cultural",
+   "estande": "204"
+  },
+  {
+   "nome": "Cold Core Tech",
+   "setor": "cultural",
+   "estande": "205",
+   "instagram": "@coldcore_tech"
+  },
+  {
+   "nome": "Coltivazione Organica SRLS",
+   "setor": "medicinal",
+   "estande": "057"
+  },
+  {
+   "nome": "COREN-SP",
+   "setor": "plural-a",
+   "estande": "127"
+  },
+  {
+   "nome": "Correa Advocacia",
+   "setor": "cultural",
+   "estande": "196"
+  },
+  {
+   "nome": "Cultive",
+   "setor": "medicinal",
+   "estande": "026",
+   "instagram": "@cultivebr"
+  },
+  {
+   "nome": "D-LEE",
+   "setor": "plural-b",
+   "estande": "015",
+   "instagram": "@bagualchile"
+  },
+  {
+   "nome": "DeLua Alquimias",
+   "setor": "cultural",
+   "estande": "243",
+   "instagram": "@deluaalquimias"
+  },
+  {
+   "nome": "Delícias da tia Ju",
+   "setor": "cultural",
+   "estande": "302",
+   "instagram": "@delicias_da_tia_ju_oficial"
+  },
+  {
+   "nome": "Dr Green",
+   "setor": "medicinal",
+   "estande": "084, 085",
+   "instagram": "@doctorgreen.ofc"
+  },
+  {
+   "nome": "DreamKeepers",
+   "setor": "cultural",
+   "estande": "266",
+   "instagram": "@dreamkeepersxamanismoo"
+  },
+  {
+   "nome": "Drim AutoCuidado",
+   "setor": "cultural",
+   "estande": "265",
+   "instagram": "@somosdrim"
+  },
+  {
+   "nome": "DrSativa",
+   "setor": "plural-c",
+   "estande": "169",
+   "instagram": "@drsativa.br"
+  },
+  {
+   "nome": "Easycoco Nutrientes",
+   "setor": "plural-c",
+   "estande": "174",
+   "instagram": "@easycoco_nutrientes"
+  },
+  {
+   "nome": "Embrapa",
+   "setor": "medicinal",
+   "estande": "125, 126, 136",
+   "tambem": "plural-a"
+  },
+  {
+   "nome": "Esmatwear",
+   "setor": "cultural",
+   "estande": "251, 252",
+   "instagram": "@esmatwear"
+  },
+  {
+   "nome": "Expomanas",
+   "setor": "cultural",
+   "estande": "275",
+   "instagram": "@expomanas"
+  },
+  {
+   "nome": "F B BOODTS",
+   "setor": "cultural",
+   "estande": "204"
+  },
+  {
+   "nome": "Favorita Substratos",
+   "setor": "cultural",
+   "estande": "244, 245",
+   "instagram": "@favoritasubstratos"
+  },
+  {
+   "nome": "FCM Law",
+   "setor": "cultural",
+   "estande": "200",
+   "instagram": "@fcmlaw"
+  },
+  {
+   "nome": "Federação das Associações de Cannabis Terapêutica",
+   "setor": "medicinal",
+   "estande": "083"
+  },
+  {
+   "nome": "Feitiços Aromáticos",
+   "setor": "plural-a",
+   "estande": "079",
+   "instagram": "@feiticos.br"
+  },
+  {
+   "nome": "Finamore Tabacos",
+   "setor": "plural-a",
+   "estande": "090",
+   "instagram": "@tabacosfinamore"
+  },
+  {
+   "nome": "Flor da Vida",
+   "setor": "medicinal",
+   "estande": "060",
+   "instagram": "@associacao.flordavida"
+  },
+  {
+   "nome": "Flora Urbana",
+   "setor": "externa",
+   "estande": "341, 342, 343, 344",
+   "instagram": "@floraurbana021"
+  },
+  {
+   "nome": "FlowerMed",
+   "setor": "cultural",
+   "estande": "322, 323, 324, 325",
+   "instagram": "@theflowermed_"
+  },
+  {
+   "nome": "Futurola",
+   "setor": "plural-c",
+   "estande": "141"
+  },
+  {
+   "nome": "GANESH INCENSOS",
+   "setor": "cultural",
+   "estande": "303"
+  },
+  {
+   "nome": "GlassVibe",
+   "setor": "cultural",
+   "estande": "192",
+   "instagram": "@glassvibe01"
+  },
+  {
+   "nome": "Go Plug Easy",
+   "setor": "plural-c",
+   "estande": "168"
+  },
+  {
+   "nome": "Gorilla Concept Store",
+   "setor": "plural-c",
+   "estande": "145",
+   "instagram": "@gorillaconceptstore"
+  },
+  {
+   "nome": "Gorilla Microbes",
+   "setor": "plural-c",
+   "estande": "166, 167",
+   "instagram": "@gorillamicrobes"
+  },
+  {
+   "nome": "Green Card Club",
+   "setor": "cultural",
+   "estande": "237",
+   "instagram": "@green.cardclub"
+  },
+  {
+   "nome": "Grovebags",
+   "setor": "cultural",
+   "estande": "219, 220"
+  },
+  {
+   "nome": "Grow Revolution",
+   "setor": "plural-c",
+   "estande": "163",
+   "instagram": "@growrevolution"
+  },
+  {
+   "nome": "GrowGang",
+   "setor": "plural-c",
+   "estande": "150, 151, 164, 165",
+   "instagram": "@growgangofficial"
+  },
+  {
+   "nome": "GrowPlant",
+   "setor": "plural-c",
+   "estande": "150, 151, 164, 165",
+   "instagram": "@growplant"
+  },
+  {
+   "nome": "GrowSafe",
+   "setor": "plural-c",
+   "estande": "166, 167",
+   "instagram": "@growsafebr"
+  },
+  {
+   "nome": "GrowUp",
+   "setor": "cultural",
+   "estande": "210",
+   "instagram": "@growup.cultivoindoor"
+  },
+  {
+   "nome": "GrubShades",
+   "setor": "cultural",
+   "estande": "250",
+   "instagram": "@grubshades"
+  },
+  {
+   "nome": "GuardFresh",
+   "setor": "cultural",
+   "estande": "280",
+   "instagram": "@oseu.sache"
+  },
+  {
+   "nome": "Gush",
+   "setor": "cultural",
+   "estande": "293",
+   "instagram": "@gushin.co"
+  },
+  {
+   "nome": "HaaX Purple",
+   "setor": "cultural",
+   "estande": "270",
+   "instagram": "@oromi.br"
+  },
+  {
+   "nome": "Hash Real One",
+   "setor": "plural-c",
+   "estande": "143, Lote L.O 06",
+   "tambem": "externa",
+   "instagram": "@hashrealone"
+  },
+  {
+   "nome": "Heinz Health",
+   "setor": "medicinal",
+   "estande": "089",
+   "instagram": "@heinzhealth.brasil"
+  },
+  {
+   "nome": "Hempsy",
+   "setor": "cultural",
+   "estande": "253",
+   "instagram": "@hempsyoficial"
+  },
+  {
+   "nome": "Heusser Hemp",
+   "setor": "plural-c",
+   "estande": "183",
+   "instagram": "@heusserhemp"
+  },
+  {
+   "nome": "High Creams",
+   "setor": "cultural",
+   "estande": "207",
+   "instagram": "@high.creams"
+  },
+  {
+   "nome": "High Nutrients",
+   "setor": "plural-c",
+   "estande": "150, 151, 164, 165",
+   "instagram": "@highnutrientsofficial"
+  },
+  {
+   "nome": "HighBreed Seeds",
+   "setor": "cultural",
+   "estande": "241, 242",
+   "instagram": "@hb.seeds"
+  },
+  {
+   "nome": "HippieBong",
+   "setor": "cultural",
+   "estande": "229, 230, 247, 248",
+   "instagram": "@hippiebong"
+  },
+  {
+   "nome": "Ice Brothers",
+   "setor": "cultural",
+   "estande": "194",
+   "instagram": "@icebrothers02"
+  },
+  {
+   "nome": "ICTCB",
+   "setor": "plural-a",
+   "estande": "128"
+  },
+  {
+   "nome": "Iracema",
+   "setor": "plural-c",
+   "estande": "168"
+  },
+  {
+   "nome": "Kannabia",
+   "setor": "cultural",
+   "estande": "232",
+   "instagram": "@kannabiagenetics"
+  },
+  {
+   "nome": "Knabs",
+   "setor": "cultural",
+   "estande": "288",
+   "instagram": "@knabsbrand"
+  },
+  {
+   "nome": "Kpipes Arte em Vidro",
+   "setor": "cultural",
+   "estande": "193",
+   "instagram": "@kpipes"
+  },
+  {
+   "nome": "La Belle",
+   "setor": "cultural",
+   "estande": "204"
+  },
+  {
+   "nome": "Latinnabis",
+   "setor": "plural-c",
+   "estande": "142"
+  },
+  {
+   "nome": "Leão Da Tijuca",
+   "setor": "cultural",
+   "estande": "217",
+   "instagram": "@leaodatijuca.growshop"
+  },
+  {
+   "nome": "Lion Rolling Circus Brasil",
+   "setor": "plural-c",
+   "estande": "180"
+  },
+  {
+   "nome": "LiorGrow",
+   "setor": "plural-c",
+   "estande": "097",
+   "instagram": "@liorgrow"
+  },
+  {
+   "nome": "Lot420",
+   "setor": "medicinal",
+   "estande": "051",
+   "instagram": "@lot4_aaaa"
+  },
+  {
+   "nome": "Magic Medic",
+   "setor": "cultural",
+   "estande": "283, 284",
+   "instagram": "@magicmedic2"
+  },
+  {
+   "nome": "ManoGrow",
+   "setor": "cultural",
+   "estande": "264",
+   "instagram": "@manogrow"
+  },
+  {
+   "nome": "Marley Brasil",
+   "setor": "plural-a",
+   "estande": "129, 132"
+  },
+  {
+   "nome": "Marroquino",
+   "setor": "plural-b",
+   "estande": "041",
+   "instagram": "@m4rroquino"
+  },
+  {
+   "nome": "Maré013D",
+   "setor": "cultural",
+   "estande": "292",
+   "instagram": "@mare013d"
+  },
+  {
+   "nome": "Mascotte",
+   "setor": "plural-c",
+   "estande": "145",
+   "instagram": "@mascotte.official"
+  },
+  {
+   "nome": "Mister Hemp",
+   "setor": "cultural",
+   "estande": "267, 268"
+  },
+  {
+   "nome": "Mr. Infusion",
+   "setor": "cultural",
+   "estande": "203",
+   "instagram": "@mrinfusion.oficial"
+  },
+  {
+   "nome": "Muchachos",
+   "setor": "plural-a",
+   "estande": "129, 132"
+  },
+  {
+   "nome": "MyBud.app",
+   "setor": "cultural",
+   "estande": "211",
+   "instagram": "@mybud.app"
+  },
+  {
+   "nome": "NabisMed",
+   "setor": "cultural",
+   "estande": "322, 323, 324, 325",
+   "instagram": "@nabismed"
+  },
+  {
+   "nome": "Nerone",
+   "setor": "plural-c",
+   "estande": "170"
+  },
+  {
+   "nome": "NirvanaGrow",
+   "setor": "cultural",
+   "estande": "258",
+   "instagram": "@nirvanagrowshopbr"
+  },
+  {
+   "nome": "NKS",
+   "setor": "plural-a",
+   "estande": "030, 049, 050"
+  },
+  {
+   "nome": "Novaterps",
+   "setor": "cultural",
+   "estande": "269"
+  },
+  {
+   "nome": "OCB",
+   "setor": "plural-a",
+   "estande": "031, 048",
+   "instagram": "@ocbofficial"
+  },
+  {
+   "nome": "OG Cannabis",
+   "setor": "cultural",
+   "estande": "227",
+   "instagram": "@ogcannabisbrasil"
+  },
+  {
+   "nome": "Ophicina Orgânica",
+   "setor": "cultural",
+   "estande": "246",
+   "instagram": "@organicaophicina"
+  },
+  {
+   "nome": "P.S Culture",
+   "setor": "cultural",
+   "estande": "228",
+   "instagram": "@p.s.culture"
+  },
+  {
+   "nome": "Paletes & Pinus",
+   "setor": "plural-a",
+   "estande": "063, 078",
+   "instagram": "@rodolforodriguesatelier"
+  },
+  {
+   "nome": "Papelito",
+   "setor": "plural-b",
+   "estande": "011, 012, 013, Lote L.M 01",
+   "tambem": "externa",
+   "instagram": "@papelitobrasil"
+  },
+  {
+   "nome": "Pay-Pay",
+   "setor": "plural-b",
+   "estande": "066, 075"
+  },
+  {
+   "nome": "Pegada 011",
+   "setor": "cultural",
+   "estande": "212",
+   "instagram": "@pegada_011"
+  },
+  {
+   "nome": "Pietricovsky Advocacia",
+   "setor": "cultural",
+   "estande": "276"
+  },
+  {
+   "nome": "Pirateria",
+   "setor": "cultural",
+   "estande": "261",
+   "instagram": "@pirateria710"
+  },
+  {
+   "nome": "Plagron",
+   "setor": "plural-c",
+   "estande": "157",
+   "instagram": "@plagron_official"
+  },
+  {
+   "nome": "Poison Dealer",
+   "setor": "cultural",
+   "estande": "210",
+   "instagram": "@poisonresistance_"
+  },
+  {
+   "nome": "Popipe",
+   "setor": "cultural",
+   "estande": "222",
+   "instagram": "@popipeheadshop"
+  },
+  {
+   "nome": "Projeto THC",
+   "setor": "plural-a",
+   "estande": "130, 131",
+   "instagram": "@lacam.ufrrj"
+  },
+  {
+   "nome": "Puff Life",
+   "setor": "plural-a",
+   "estande": "008",
+   "instagram": "@pufflifebr"
+  },
+  {
+   "nome": "Puffco",
+   "setor": "plural-c",
+   "estande": "148",
+   "instagram": "@puffco"
+  },
+  {
+   "nome": "Pure Instinto",
+   "setor": "cultural",
+   "estande": "274",
+   "instagram": "@pure_instinto"
+  },
+  {
+   "nome": "Purpl Scientific",
+   "setor": "cultural",
+   "estande": "309"
+  },
+  {
+   "nome": "Qura App",
+   "setor": "medicinal",
+   "estande": "029",
+   "instagram": "@appqura"
+  },
+  {
+   "nome": "Reconstruir Cannabis",
+   "setor": "medicinal",
+   "estande": "088",
+   "instagram": "@reconstruircannabis"
+  },
+  {
+   "nome": "Revivid Brasil",
+   "setor": "plural-a",
+   "estande": "095, 111",
+   "instagram": "@revividbrasil"
+  },
+  {
+   "nome": "Sadhu",
+   "setor": "plural-a",
+   "estande": "006, 022, 023, 339, 340, Lote L.O 08",
+   "tambem": "externa",
+   "instagram": "@gruposadhu"
+  },
+  {
+   "nome": "SALVAR",
+   "setor": "medicinal",
+   "estande": "118",
+   "instagram": "@salvar_se"
+  },
+  {
+   "nome": "Santa Muerte Chopp Artesanal",
+   "setor": "cultural",
+   "estande": "300"
+  },
+  {
+   "nome": "Santorini Tabacos",
+   "setor": "plural-a",
+   "estande": "046",
+   "instagram": "@santorini__oficial"
+  },
+  {
+   "nome": "Sativas Jóias",
+   "setor": "cultural",
+   "estande": "214",
+   "instagram": "@sativasjoias"
+  },
+  {
+   "nome": "SatoGlass",
+   "setor": "cultural",
+   "estande": "233, 234",
+   "instagram": "@satoglass"
+  },
+  {
+   "nome": "SBEC",
+   "setor": "plural-a",
+   "estande": "134"
+  },
+  {
+   "nome": "SBOSI",
+   "setor": "plural-a",
+   "estande": "133"
+  },
+  {
+   "nome": "Seed Club",
+   "setor": "cultural",
+   "estande": "218"
+  },
+  {
+   "nome": "Seis Pés",
+   "setor": "externa",
+   "estande": "341, 342, 343, 344"
+  },
+  {
+   "nome": "Selva Seeds",
+   "setor": "plural-a",
+   "estande": "008"
+  },
+  {
+   "nome": "Silver River Seeds",
+   "setor": "cultural",
+   "estande": "271"
+  },
+  {
+   "nome": "Smoking",
+   "setor": "plural-c",
+   "estande": "146, Lote L.O 05",
+   "tambem": "externa",
+   "instagram": "@smokingpaperbr"
+  },
+  {
+   "nome": "SOBECA",
+   "setor": "plural-a",
+   "estande": "127"
+  },
+  {
+   "nome": "Spice Glass",
+   "setor": "cultural",
+   "estande": "192",
+   "instagram": "@spiceglass_"
+  },
+  {
+   "nome": "Squadafum",
+   "setor": "plural-a",
+   "estande": "008",
+   "instagram": "@squadafum"
+  },
+  {
+   "nome": "Sunflower Trimmer",
+   "setor": "plural-c",
+   "estande": "154, 155, 160"
+  },
+  {
+   "nome": "SWED LLC",
+   "setor": "plural-a",
+   "estande": "153",
+   "instagram": "@sweddotcom"
+  },
+  {
+   "nome": "Tabaker",
+   "setor": "plural-a",
+   "estande": "092, 093, 094, 112, 113, 114"
+  },
+  {
+   "nome": "Tenda Gelada",
+   "setor": "plural-c",
+   "estande": "161",
+   "instagram": "@tendagelada"
+  },
+  {
+   "nome": "Terral Jardinagem",
+   "setor": "plural-c",
+   "estande": "171",
+   "instagram": "@terraljardinagem"
+  },
+  {
+   "nome": "The Original Cones",
+   "setor": "plural-b",
+   "estande": "010",
+   "instagram": "@theoriginalcones.official"
+  },
+  {
+   "nome": "THSer",
+   "setor": "medicinal",
+   "estande": "026",
+   "instagram": "@thser.associacao"
+  },
+  {
+   "nome": "Tiloro",
+   "setor": "cultural",
+   "estande": "191",
+   "instagram": "@__tiloro"
+  },
+  {
+   "nome": "Térpia",
+   "setor": "cultural",
+   "estande": "199",
+   "instagram": "@terpia.oficial"
+  },
+  {
+   "nome": "Visionart",
+   "setor": "cultural",
+   "estande": "263",
+   "instagram": "@_visionart"
+  },
+  {
+   "nome": "Vitonez",
+   "setor": "cultural",
+   "estande": "277, 278",
+   "instagram": "@vitonezzzzz"
+  },
+  {
+   "nome": "VVNCIA GROWTECH",
+   "setor": "plural-b",
+   "estande": "042",
+   "instagram": "@vvncia_growtech"
+  },
+  {
+   "nome": "WeedOrHemp",
+   "setor": "cultural",
+   "estande": "255",
+   "instagram": "@WorH.br"
+  },
+  {
+   "nome": "WinCBD",
+   "setor": "cultural",
+   "estande": "322, 323, 324, 325",
+   "instagram": "@whincbd"
+  },
+  {
+   "nome": "WoodKit",
+   "setor": "cultural",
+   "estande": "231",
+   "instagram": "@woodkit.theoriginal"
+  },
+  {
+   "nome": "ZiziShop",
+   "setor": "cultural",
+   "estande": "224",
+   "instagram": "@_zizishop"
+  },
+  {
+   "nome": "Zomo",
+   "setor": "plural-a",
+   "estande": "092, 093, 094, 112, 113, 114"
+  },
+  {
+   "nome": "Zortele Óculos",
+   "setor": "cultural",
+   "estande": "259",
+   "instagram": "@zortele"
+  },
+  {
+   "nome": "Ó Ki Cookie",
+   "setor": "cultural",
+   "estande": "225, 226",
+   "instagram": "@o_ki_cookie"
+  }
+ ]
+}

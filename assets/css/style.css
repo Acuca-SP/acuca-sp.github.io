@@ -218,3 +218,41 @@ input[type=checkbox], input[type=radio] { accent-color: var(--vermelho); }
 .acoes { position: sticky; bottom: 0; background: var(--gelo); padding: 12px 0; display: flex; gap: 8px; flex-wrap: wrap; }
 .dica { font-size: 13px; color: var(--cinza); margin: 0; }
 [hidden] { display: none !important; }
+
+/* ---------- mapa da ExpoCannabis ---------- */
+.expo { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: start; margin-top: 20px; }
+.planta { display: grid; grid-template-columns: 2fr 1fr; grid-template-areas: "p7 cultural" "p7 p8" "externa externa"; gap: 12px; }
+.planta .pavilhao { grid-area: p7; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: var(--branco); border: 2px solid var(--cinza-claro); border-radius: 14px; padding: 12px; }
+.planta .nome-pav { grid-column: 1 / -1; margin: 0; font-weight: 800; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--cinza); }
+.planta .cultural { grid-area: cultural; }
+.planta .p8 { grid-area: p8; }
+.planta .externa { grid-area: externa; min-height: 90px; }
+.planta .setor { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 120px; padding: 12px; border: 3px solid var(--preto); border-radius: var(--raio); background: var(--preto); color: var(--branco); cursor: pointer; font: 600 13px var(--sans); text-align: center; transition: background .15s; }
+.planta .setor strong { font: italic 700 clamp(1.05rem, 2.4vw, 1.5rem) var(--serif); }
+.planta .setor .conta { opacity: .85; }
+.planta .setor.cultural { background: var(--vermelho-escuro); border-color: var(--vermelho-escuro); }
+.planta .setor.externa { background: #3d5a40; border-color: #3d5a40; }
+.planta .setor:hover { background: var(--grafite-2); }
+.planta .setor.cultural:hover { background: var(--vermelho); }
+.planta .setor.externa:hover { background: #4c7050; }
+.planta .setor[aria-pressed="true"] { outline: 4px solid var(--vermelho); outline-offset: 3px; }
+.planta .setor.cultural[aria-pressed="true"] { outline-color: var(--preto); }
+@media (max-width: 560px) {
+  .planta { grid-template-columns: 1fr 1fr; grid-template-areas: "p7 p7" "cultural p8" "externa externa"; }
+  .planta .setor { min-height: 96px; }
+}
+.expo + .dica, .expo .dica { margin-top: 8px; }
+#setor-info h3 { margin-bottom: 8px; }
+#setor-info .ficha { margin-top: 12px; }
+#setor-info .ficha dd { white-space: nowrap; }
+.busca-expo { display: grid; gap: 12px; margin-bottom: 8px; }
+.busca-expo .campo { max-width: 520px; }
+.busca-expo .filtros { margin: 0; }
+.lista-expo { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.lista-expo li { background: var(--gelo); border-radius: var(--raio); padding: 12px 14px; display: grid; gap: 4px; font-size: 14px; align-content: start; }
+.lista-expo .estande { font-weight: 700; }
+.lista-expo a { overflow-wrap: anywhere; }
+.setor-tag { justify-self: start; font: 800 11px var(--sans); text-transform: uppercase; letter-spacing: .08em; padding: 3px 8px; border-radius: 999px; background: var(--preto); color: var(--branco); }
+.setor-tag.cultural { background: var(--vermelho-escuro); }
+.setor-tag.externa { background: #3d5a40; }
+@media (max-width: 860px) { .expo { grid-template-columns: 1fr; } }
