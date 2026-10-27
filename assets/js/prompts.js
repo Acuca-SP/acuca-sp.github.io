@@ -55,12 +55,21 @@
         el('p', { class: 'dica', style: 'margin-top:6px', text: `Exemplos com ${ias.join(' e ')} em produção.` }));
     }
     const caixa = el('div', {});
+    // cada foto fica com a própria proporção; a largura de cada uma é proporcional a ela,
+    // então as duas ficam com a mesma altura e juntas ocupam a linha inteira (até ALTURA_MAX px de altura)
+    const ALTURA_MAX = 440;
+    const foto = (src, [w, h], alt, legenda) => el('figure', { style: `flex:${w / h} 1 0` },
+      el('a', { href: `../${src}`, target: '_blank', rel: 'noopener', title: 'Abrir a foto em tamanho cheio' },
+        el('img', { src: `../${src}`, alt, loading: 'lazy', width: w, height: h })),
+      el('figcaption', { text: legenda }));
     const par = (ex) => {
       const credito = [ex.credito && `Foto: ${ex.credito}`, `gerado com ${ex.ferramenta}`].filter(Boolean).join(' · ');
+      const [aw, ah] = ex.antes_px;
+      const [dw, dh] = ex.depois_px;
       return el('div', {},
-        el('div', { class: 'antes-depois' },
-          el('figure', {}, el('img', { src: `../${ex.antes}`, alt: `Foto original: ${ex.descricao || p.titulo}`, loading: 'lazy', width: 800, height: 1000 }), el('figcaption', { text: 'Antes' })),
-          el('figure', {}, el('img', { src: `../${ex.depois}`, alt: `Depois, com o prompt ${p.titulo} no ${ex.ferramenta}`, loading: 'lazy', width: 800, height: 1000 }), el('figcaption', { text: `Depois · ${ex.ferramenta}` }))),
+        el('div', { class: 'antes-depois', style: `max-width:${Math.round(ALTURA_MAX * (aw / ah + dw / dh))}px` },
+          foto(ex.antes, ex.antes_px, `Foto original: ${ex.descricao || p.titulo}`, 'Antes'),
+          foto(ex.depois, ex.depois_px, `Depois, com o prompt ${p.titulo} no ${ex.ferramenta}`, `Depois · ${ex.ferramenta}`)),
         el('p', { class: 'dica', style: 'margin-top:6px', text: credito }));
     };
     const mostrar = (i) => {
@@ -99,13 +108,13 @@
     return el('article', { class: 'cartao prompt', id: p.id, 'data-categorias': p.categorias.join(' ') },
       el('header', {}, el('h3', { text: p.titulo }), el('span', { class: `selo ${classe}`, text: rotulo })),
       el('p', { style: 'margin:0', text: p.direcao }),
+      exemplos(p, ias),
       el('div', { class: 'grade g2', style: 'gap:24px' },
-        exemplos(p, ias),
         el('div', { class: 'grade', style: 'gap:14px;align-content:start' },
           ficha,
-          p.variaveis.length ? el('div', { class: 'grade', style: 'gap:10px' }, el('p', { class: 'dica', text: 'Preencha em inglês. O texto abaixo atualiza na hora.' }), campos) : null,
-          el('div', { class: 'codigo' }, pre, botaoCopiar),
-          p.dicas.length ? el('ul', { class: 'dica', style: 'margin:0;padding-left:18px' }, p.dicas.map((d) => el('li', { text: d }))) : null)));
+          p.variaveis.length ? el('div', { class: 'grade', style: 'gap:10px' }, el('p', { class: 'dica', text: 'Preencha em inglês. O prompt ao lado atualiza na hora.' }), campos) : null,
+          p.dicas.length ? el('ul', { class: 'dica', style: 'margin:0;padding-left:18px' }, p.dicas.map((d) => el('li', { text: d }))) : null),
+        el('div', { class: 'codigo' }, pre, botaoCopiar)));
   };
 
   const filtrar = (cat) => {

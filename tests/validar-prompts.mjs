@@ -10,6 +10,21 @@ const dados = JSON.parse(fs.readFileSync(path.join(raiz, 'data/prompts.json'), '
 const erros = [];
 const erro = (id, msg) => erros.push(`${id}: ${msg}`);
 
+// [largura, altura] de um JPG ou PNG, lido do cabeçalho
+const tamanho = (arq) => {
+  const b = fs.readFileSync(arq);
+  if (b.readUInt32BE(0) === 0x89504e47) return [b.readUInt32BE(16), b.readUInt32BE(20)];
+  if (b[0] === 0xff && b[1] === 0xd8) {
+    for (let i = 2; i < b.length - 9;) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const m = b[i + 1];
+      if (m >= 0xc0 && m <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(m)) return [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)];
+      i += 2 + b.readUInt16BE(i + 2);
+    }
+  }
+  return null;
+};
+
 const CATEGORIAS = new Set(['produto', 'obra', 'textil', 'pequeno']);
 const STATUS = new Set(['em-teste', 'aprovado']);
 const ids = new Set();
@@ -42,7 +57,13 @@ for (const p of dados.prompts) {
     if (ex.ferramenta && !(p.testado_com || []).includes(ex.ferramenta)) erro(id, `${ex.ferramenta} tem exemplo mas não está em testado_com`);
     for (const lado of ['antes', 'depois']) {
       const arq = ex[lado];
-      if (arq && !fs.existsSync(path.join(raiz, arq))) erro(id, `arquivo de exemplo não existe: ${arq}`);
+      if (!arq) continue;
+      if (!fs.existsSync(path.join(raiz, arq))) { erro(id, `arquivo de exemplo não existe: ${arq}`); continue; }
+      // a página usa o tamanho para alinhar as duas fotos na mesma altura
+      const real = tamanho(path.join(raiz, arq));
+      const salvo = ex[`${lado}_px`];
+      if (!real) erro(id, `não consegui ler o tamanho de ${arq} (use JPG ou PNG)`);
+      else if (!salvo || salvo[0] !== real[0] || salvo[1] !== real[1]) erro(id, `${lado}_px de ${ex.ferramenta} deve ser [${real}]`);
     }
   }
   if (p.status === 'aprovado' && !(p.exemplos || []).length) erro(id, 'aprovado precisa de pelo menos um exemplo de antes e depois');

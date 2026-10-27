@@ -36,14 +36,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/ajuste-fino-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            1200,
+            798
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/ajuste-fino-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            1200,
+            800
+          ]
         }
       ]
     },
@@ -79,14 +95,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/estudio-branco-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            1200,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/estudio-branco-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            1200,
+            1200
+          ]
         }
       ]
     },
@@ -125,14 +157,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/cor-solida-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            967,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/cor-solida-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            960,
+            1200
+          ]
         }
       ]
     },
@@ -168,14 +216,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/luz-natural-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            967,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/luz-natural-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            960,
+            1200
+          ]
         }
       ]
     },
@@ -211,14 +275,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/editorial-escuro-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            967,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/editorial-escuro-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            960,
+            1200
+          ]
         }
       ]
     },
@@ -259,14 +339,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/flat-lay-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            1200,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/flat-lay-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            1200,
+            1200
+          ]
         }
       ]
     },
@@ -305,14 +401,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/galeria-depois-gemini.jpg",
           "descricao": "fotografia do bule Utah Teapot emoldurada como obra",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            967,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/galeria-depois-chatgpt.jpg",
           "descricao": "fotografia do bule Utah Teapot emoldurada como obra",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            960,
+            1200
+          ]
         }
       ]
     },
@@ -349,14 +461,30 @@
           "antes": "assets/img/exemplos/macro-textura-antes.jpg",
           "depois": "assets/img/exemplos/macro-textura-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            180,
+            120
+          ],
+          "depois_px": [
+            1200,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/macro-textura-antes.jpg",
           "depois": "assets/img/exemplos/macro-textura-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            180,
+            120
+          ],
+          "depois_px": [
+            1200,
+            1200
+          ]
         }
       ]
     },
@@ -395,14 +523,30 @@
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/na-mao-depois-gemini.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            967,
+            1200
+          ]
         },
         {
           "ferramenta": "ChatGPT",
           "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
           "depois": "assets/img/exemplos/na-mao-depois-chatgpt.jpg",
           "descricao": "bule de porcelana branca (Utah Teapot)",
-          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)",
+          "antes_px": [
+            576,
+            383
+          ],
+          "depois_px": [
+            960,
+            1200
+          ]
         }
       ]
     }
