@@ -54,35 +54,77 @@
           el('figure', {}, el('div', { class: 'vazio', text: 'Resultado aprovado em produção' }), el('figcaption', { text: 'Depois' }))),
         el('p', { class: 'dica', style: 'margin-top:6px', text: `Exemplos com ${ias.join(' e ')} em produção.` }));
     }
-    const caixa = el('div', {});
-    // cada foto fica com a própria proporção; a largura de cada uma é proporcional a ela,
-    // então as duas ficam com a mesma altura e juntas ocupam a linha inteira (até ALTURA_MAX px de altura)
-    const ALTURA_MAX = 440;
-    const foto = (src, [w, h], alt, legenda) => el('figure', { style: `flex:${w / h} 1 0` },
+    // a foto original e um "depois" por IA, todos na mesma linha: cada foto mantém a própria proporção e a largura
+    // de cada uma é proporcional a ela, então ficam com a mesma altura (até ALTURA_MAX px) e ocupam a linha inteira
+    const ALTURA_MAX = 400;
+    const foto = (src, [w, h], alt, legenda, classe) => el('figure', { class: classe },
       el('a', { href: `../${src}`, target: '_blank', rel: 'noopener', title: 'Abrir a foto em tamanho cheio' },
         el('img', { src: `../${src}`, alt, loading: 'lazy', width: w, height: h })),
       el('figcaption', { text: legenda }));
-    const par = (ex) => {
-      const credito = [ex.credito && `Foto: ${ex.credito}`, `gerado com ${ex.ferramenta}`].filter(Boolean).join(' · ');
-      const [aw, ah] = ex.antes_px;
-      const [dw, dh] = ex.depois_px;
-      return el('div', {},
-        el('div', { class: 'antes-depois', style: `max-width:${Math.round(ALTURA_MAX * (aw / ah + dw / dh))}px` },
-          foto(ex.antes, ex.antes_px, `Foto original: ${ex.descricao || p.titulo}`, 'Antes'),
-          foto(ex.depois, ex.depois_px, `Depois, com o prompt ${p.titulo} no ${ex.ferramenta}`, `Depois · ${ex.ferramenta}`)),
-        el('p', { class: 'dica', style: 'margin-top:6px', text: credito }));
+    const original = lista[0];
+    // colunas em "fr" proporcionais à largura/altura de cada foto: o grid desconta os espaços antes de dividir,
+    // então as alturas ficam exatamente iguais. No celular o antes ocupa a linha de cima (--colunas-celular).
+    const fr = ([w, h]) => `${(w / h).toFixed(4)}fr`;
+    const depois = lista.map((ex) => ex.depois_px);
+    const proporcoes = [original.antes_px, ...depois].reduce((s, [w, h]) => s + w / h, 0);
+    const credito = [original.credito && `Foto original: ${original.credito}`,
+      `depois gerados com ${lista.map((ex) => ex.ferramenta).join(' e ')}`].filter(Boolean).join(' · ');
+    return el('div', {},
+      el('div', { class: 'antes-depois', style: `max-width:${Math.round(ALTURA_MAX * proporcoes)}px;` +
+        `--colunas:${[original.antes_px, ...depois].map(fr).join(' ')};--colunas-celular:${depois.map(fr).join(' ')}` },
+        foto(original.antes, original.antes_px, `Foto original: ${original.descricao || p.titulo}`, 'Antes', 'antes'),
+        lista.map((ex) => foto(ex.depois, ex.depois_px, `Depois, com o prompt ${p.titulo} no ${ex.ferramenta}`, `Depois · ${ex.ferramenta}`, 'depois'))),
+      el('p', { class: 'dica', style: 'margin-top:6px', text: credito }));
+  };
+
+  // botão "Preview": o antes e depois abre numa janela (popover) ao passar o mouse ou ao tocar/clicar
+  const preview = (p, ias) => {
+    if (!(p.exemplos || []).some((ex) => ex.antes && ex.depois)) {
+      return el('span', { class: 'selo', text: `antes e depois com ${ias.join(' e ')} em produção` });
+    }
+    const id = `preview-${p.id}`;
+    // popover "manual": abrir e fechar ficam todos aqui (o fechamento automático do navegador brigava com o clique)
+    const fecharBotao = el('button', { type: 'button', class: 'btn sm contorno', text: 'Fechar' });
+    const janela = el('div', { id, popover: 'manual', class: 'janela-preview', role: 'dialog', 'aria-label': `Antes e depois: ${p.titulo}` },
+      el('div', { class: 'janela-topo' }, el('h3', { text: `Antes e depois · ${p.titulo}` }), fecharBotao),
+      exemplos(p, ias));
+    const botao = el('button', { type: 'button', class: 'btn sm', 'aria-controls': id, 'aria-haspopup': 'dialog', 'aria-expanded': 'false', text: 'Preview: antes e depois' });
+
+    let timer;
+    let fixo = false; // aberta por clique/teclado: só fecha com Fechar, Esc ou clique fora
+    const aberta = () => janela.matches(':popover-open');
+    const mostrar = () => { clearTimeout(timer); if (!aberta()) janela.showPopover(); botao.setAttribute('aria-expanded', 'true'); };
+    const esconder = () => {
+      clearTimeout(timer);
+      fixo = false;
+      if (aberta()) janela.hidePopover();
+      botao.setAttribute('aria-expanded', 'false');
     };
-    const mostrar = (i) => {
-      caixa.replaceChildren(par(lista[i]));
-      for (const [j, b] of botoes.entries()) b.setAttribute('aria-pressed', String(i === j));
+    // passar o mouse abre; sair do botão e da janela fecha, com uma folga para dar tempo de levar o mouse até ela
+    const sair = () => { clearTimeout(timer); timer = setTimeout(() => { if (!fixo) esconder(); }, 250); };
+    if (matchMedia('(hover: hover)').matches) {
+      botao.addEventListener('mouseenter', mostrar);
+      botao.addEventListener('mouseleave', sair);
+      janela.addEventListener('mouseenter', () => clearTimeout(timer));
+      janela.addEventListener('mouseleave', sair);
+    }
+    // mouse e toque agem ao pressionar (antes de a janela aberta pelo hover cobrir o botão); o clique fica para o teclado
+    const alternar = () => {
+      if (aberta() && fixo) { esconder(); return false; }
+      fixo = true;
+      mostrar();
+      return true;
     };
-    const botoes = lista.length > 1 ? lista.map((ex, i) => {
-      const b = el('button', { type: 'button', text: ex.ferramenta });
-      b.addEventListener('click', () => mostrar(i));
-      return b;
-    }) : [];
-    mostrar(0);
-    return el('div', {}, botoes.length ? el('div', { class: 'filtros', role: 'group', 'aria-label': 'Ver exemplo feito com', style: 'margin-bottom:10px' }, botoes) : null, caixa);
+    botao.addEventListener('pointerdown', (e) => { if (e.button === 0) alternar(); });
+    botao.addEventListener('click', (e) => { if (e.detail === 0 && alternar()) fecharBotao.focus(); });
+    // a janela aberta pelo mouse cobre o botão: clicar nela a mantém aberta
+    janela.addEventListener('pointerdown', () => { fixo = true; clearTimeout(timer); });
+    fecharBotao.addEventListener('click', () => { esconder(); botao.focus(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && aberta()) { esconder(); botao.focus(); } });
+    document.addEventListener('pointerdown', (e) => {
+      if (aberta() && !janela.contains(e.target) && !botao.contains(e.target)) esconder();
+    });
+    return el('div', { class: 'linha-preview' }, botao, janela);
   };
 
   const cartao = (p, ias) => {
@@ -108,7 +150,7 @@
     return el('article', { class: 'cartao prompt', id: p.id, 'data-categorias': p.categorias.join(' ') },
       el('header', {}, el('h3', { text: p.titulo }), el('span', { class: `selo ${classe}`, text: rotulo })),
       el('p', { style: 'margin:0', text: p.direcao }),
-      exemplos(p, ias),
+      preview(p, ias),
       el('div', { class: 'grade g2', style: 'gap:24px' },
         el('div', { class: 'grade', style: 'gap:14px;align-content:start' },
           ficha,
