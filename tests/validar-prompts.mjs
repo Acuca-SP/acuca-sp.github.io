@@ -35,14 +35,17 @@ for (const p of dados.prompts) {
   for (const v of p.variaveis || []) if (!v.exemplo) erro(id, `variável ${v.nome} sem exemplo`);
   if (/[À-ÿ]/.test((p.prompt || '').replace('{PRESERVACAO}', ''))) erro(id, 'o prompt deve estar em inglês (achei acentos)');
 
-  if (p.status === 'aprovado') {
-    if (!p.exemplo?.antes || !p.exemplo?.depois) erro(id, 'aprovado precisa de exemplo.antes e exemplo.depois');
-    if (!p.testado_com.length) erro(id, 'aprovado precisa dizer em qual IA foi testado (testado_com)');
+  if (!Array.isArray(p.exemplos)) erro(id, 'exemplos deve ser uma lista (pode ser vazia)');
+  for (const ex of p.exemplos || []) {
+    if (!ex.ferramenta) erro(id, 'exemplo sem ferramenta (qual IA gerou)');
+    if (!ex.antes || !ex.depois) erro(id, `exemplo de ${ex.ferramenta} sem antes ou depois`);
+    if (ex.ferramenta && !(p.testado_com || []).includes(ex.ferramenta)) erro(id, `${ex.ferramenta} tem exemplo mas não está em testado_com`);
+    for (const lado of ['antes', 'depois']) {
+      const arq = ex[lado];
+      if (arq && !fs.existsSync(path.join(raiz, arq))) erro(id, `arquivo de exemplo não existe: ${arq}`);
+    }
   }
-  for (const lado of ['antes', 'depois']) {
-    const arq = p.exemplo?.[lado];
-    if (arq && !fs.existsSync(path.join(raiz, arq))) erro(id, `arquivo de exemplo não existe: ${arq}`);
-  }
+  if (p.status === 'aprovado' && !(p.exemplos || []).length) erro(id, 'aprovado precisa de pelo menos um exemplo de antes e depois');
 }
 
 if (erros.length) {

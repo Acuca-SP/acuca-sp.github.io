@@ -44,22 +44,39 @@
     setTimeout(() => { botao.textContent = antes; }, 1600);
   };
 
-  const exemplo = (p) => {
-    const ex = p.exemplo;
-    if (!ex || !ex.antes || !ex.depois) {
-      return el('div', { class: 'antes-depois' },
-        el('figure', {}, el('div', { class: 'vazio', text: 'Exemplo de foto original em produção' }), el('figcaption', { text: 'Antes' })),
-        el('figure', {}, el('div', { class: 'vazio', text: 'Resultado aprovado em produção' }), el('figcaption', { text: 'Depois' })));
+  // um par de antes/depois por IA (Gemini, ChatGPT…); com mais de um, botões alternam entre eles
+  const exemplos = (p, ias) => {
+    const lista = (p.exemplos || []).filter((ex) => ex.antes && ex.depois);
+    if (!lista.length) {
+      return el('div', {},
+        el('div', { class: 'antes-depois' },
+          el('figure', {}, el('div', { class: 'vazio', text: 'Exemplo de foto original em produção' }), el('figcaption', { text: 'Antes' })),
+          el('figure', {}, el('div', { class: 'vazio', text: 'Resultado aprovado em produção' }), el('figcaption', { text: 'Depois' }))),
+        el('p', { class: 'dica', style: 'margin-top:6px', text: `Exemplos com ${ias.join(' e ')} em produção.` }));
     }
-    const credito = [ex.credito && `Foto: ${ex.credito}`, ex.ferramenta && `gerado com ${ex.ferramenta}`].filter(Boolean).join(' · ');
-    return el('div', {},
-      el('div', { class: 'antes-depois' },
-        el('figure', {}, el('img', { src: `../${ex.antes}`, alt: `Foto original: ${ex.descricao || p.titulo}`, loading: 'lazy', width: 800, height: 1000 }), el('figcaption', { text: 'Antes' })),
-        el('figure', {}, el('img', { src: `../${ex.depois}`, alt: `Depois, com o prompt ${p.titulo}`, loading: 'lazy', width: 800, height: 1000 }), el('figcaption', { text: 'Depois' }))),
-      credito && el('p', { class: 'dica', style: 'margin-top:6px', text: credito }));
+    const caixa = el('div', {});
+    const par = (ex) => {
+      const credito = [ex.credito && `Foto: ${ex.credito}`, `gerado com ${ex.ferramenta}`].filter(Boolean).join(' · ');
+      return el('div', {},
+        el('div', { class: 'antes-depois' },
+          el('figure', {}, el('img', { src: `../${ex.antes}`, alt: `Foto original: ${ex.descricao || p.titulo}`, loading: 'lazy', width: 800, height: 1000 }), el('figcaption', { text: 'Antes' })),
+          el('figure', {}, el('img', { src: `../${ex.depois}`, alt: `Depois, com o prompt ${p.titulo} no ${ex.ferramenta}`, loading: 'lazy', width: 800, height: 1000 }), el('figcaption', { text: `Depois · ${ex.ferramenta}` }))),
+        el('p', { class: 'dica', style: 'margin-top:6px', text: credito }));
+    };
+    const mostrar = (i) => {
+      caixa.replaceChildren(par(lista[i]));
+      for (const [j, b] of botoes.entries()) b.setAttribute('aria-pressed', String(i === j));
+    };
+    const botoes = lista.length > 1 ? lista.map((ex, i) => {
+      const b = el('button', { type: 'button', text: ex.ferramenta });
+      b.addEventListener('click', () => mostrar(i));
+      return b;
+    }) : [];
+    mostrar(0);
+    return el('div', {}, botoes.length ? el('div', { class: 'filtros', role: 'group', 'aria-label': 'Ver exemplo feito com', style: 'margin-bottom:10px' }, botoes) : null, caixa);
   };
 
-  const cartao = (p) => {
+  const cartao = (p, ias) => {
     const valores = {};
     const [classe, rotulo] = STATUS[p.status] || STATUS['em-teste'];
     const pre = el('pre', { id: `prompt-${p.id}` });
@@ -83,7 +100,7 @@
       el('header', {}, el('h3', { text: p.titulo }), el('span', { class: `selo ${classe}`, text: rotulo })),
       el('p', { style: 'margin:0', text: p.direcao }),
       el('div', { class: 'grade g2', style: 'gap:24px' },
-        exemplo(p),
+        exemplos(p, ias),
         el('div', { class: 'grade', style: 'gap:14px;align-content:start' },
           ficha,
           p.variaveis.length ? el('div', { class: 'grade', style: 'gap:10px' }, el('p', { class: 'dica', text: 'Preencha em inglês. O texto abaixo atualiza na hora.' }), campos) : null,
@@ -102,7 +119,7 @@
       lista.textContent = '';
       for (const p of dados.prompts) {
         p.texto = p.prompt.replace('{PRESERVACAO}', dados.regra_de_preservacao);
-        lista.append(cartao(p));
+        lista.append(cartao(p, dados.ias_dos_exemplos || []));
       }
       for (const b of document.querySelectorAll('[data-filtro]')) b.addEventListener('click', () => filtrar(b.dataset.filtro));
       if (location.hash) document.querySelector(location.hash)?.scrollIntoView();

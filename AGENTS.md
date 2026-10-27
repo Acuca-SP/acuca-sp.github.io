@@ -25,7 +25,7 @@ gratuitas para artistas. Publicado em https://acuca-sp.github.io a partir da bra
 | `data/prompts.json` | Prompts, direções de arte, variáveis `[EM COLCHETES]`, status e exemplos. `{PRESERVACAO}` é trocado por `regra_de_preservacao` |
 | `marca-dagua/` + `assets/js/marca-dagua.js` | Ferramenta de marca d'água (canvas; prévia reduzida, exportação no tamanho original) |
 | `assets/js/zip.js` | ZIP sem compressão usado no "Baixar todas" |
-| `assets/img/exemplos/` | Pares de antes e depois dos prompts (`<id>-antes.jpg`, `<id>-depois.jpg`) |
+| `assets/img/exemplos/` | Pares de antes e depois dos prompts (`<id>-antes.jpg`, `<id>-depois-<ia>.jpg`), com exemplos de Gemini e ChatGPT |
 | `tests/validar-prompts.mjs` | Validação do `prompts.json` (roda também no GitHub Actions) |
 
 ## Verificar antes de publicar

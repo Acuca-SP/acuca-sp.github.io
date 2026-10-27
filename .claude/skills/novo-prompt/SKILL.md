@@ -20,7 +20,7 @@ Os prompts ficam em `data/prompts.json` → `prompts[]`. A página `prompts/` l�
   "dicas": ["Dica prática em português."],
   "status": "em-teste",                  // só vira "aprovado" pela skill exemplo-antes-depois
   "testado_com": [],
-  "exemplo": null
+  "exemplos": []                         // pares de antes/depois por IA (skill exemplo-antes-depois)
 }
 ```
 
