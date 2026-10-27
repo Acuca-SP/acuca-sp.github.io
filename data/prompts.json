@@ -25,9 +25,27 @@
         "Use quando a foto já está boa de enquadramento e só precisa de acabamento.",
         "Se a IA mudar a cor do produto, peça de novo acrescentando: \"Match the product colors to the original photo exactly.\""
       ],
-      "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "status": "aprovado",
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/ajuste-fino-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/ajuste-fino-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "estudio-branco",
@@ -50,9 +68,27 @@
         "Fotografe o original de frente, com o produto inteiro na foto e sem cortar as bordas.",
         "Para marketplaces que exigem fundo branco, confira se o fundo ficou realmente branco (#FFFFFF) e não cinza-claro."
       ],
-      "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "status": "aprovado",
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/estudio-branco-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/estudio-branco-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "cor-solida",
@@ -78,9 +114,27 @@
         "Escolha uma cor que contraste com o produto: produto claro em fundo forte, produto colorido em fundo neutro como areia ou cinza.",
         "Para uma série de fotos do mesmo produto, mantenha a mesma cor em todas."
       ],
-      "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "status": "aprovado",
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/cor-solida-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/cor-solida-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "luz-natural",
@@ -103,9 +157,27 @@
         "Se a IA colocar objetos demais, troque \"one or two discreet neutral props\" por \"no props\".",
         "Funciona bem para peças de casa: almofadas, cerâmica, quadros pequenos, pelúcias."
       ],
-      "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "status": "aprovado",
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/luz-natural-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/luz-natural-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "editorial-escuro",
@@ -128,9 +200,27 @@
         "Evite com produtos pretos ou muito escuros: eles somem no fundo. Nesse caso use a direção Pop com fundo claro.",
         "Bom para escultura, peças de vidro e metal, e objetos com brilho."
       ],
-      "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "status": "aprovado",
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/editorial-escuro-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/editorial-escuro-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "flat-lay",
@@ -155,11 +245,30 @@
       ],
       "dicas": [
         "A foto original precisa ter sido tirada de cima. A IA não deve inventar outro ângulo do produto.",
-        "Superfícies que funcionam bem: linho cru, papel kraft, granilite claro, madeira clara."
+        "Superfícies que funcionam bem: linho cru, papel kraft, granilite claro, madeira clara.",
+        "No teste com uma foto do bule de lado, o Gemini inventou uma vista de cima que não existe e o ChatGPT colou o bule de lado sobre a mesa vista de cima. Use só com foto tirada de cima."
       ],
       "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/flat-lay-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/flat-lay-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "galeria",
@@ -182,11 +291,30 @@
       ],
       "dicas": [
         "Fotografe a obra de frente, inteira, com luz do dia e sem reflexo. Quanto melhor o original, mais fiel o resultado.",
-        "Confira o resultado lado a lado com a obra: a IA não pode mudar nenhum detalhe do seu trabalho. Se mudar, gere de novo."
+        "Confira o resultado lado a lado com a obra: a IA não pode mudar nenhum detalhe do seu trabalho. Se mudar, gere de novo.",
+        "No exemplo, a \"obra\" é a própria foto do bule, tratada como fotografia emoldurada: as duas IAs mantiveram a imagem igual."
       ],
-      "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "status": "aprovado",
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/galeria-depois-gemini.jpg",
+          "descricao": "fotografia do bule Utah Teapot emoldurada como obra",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/galeria-depois-chatgpt.jpg",
+          "descricao": "fotografia do bule Utah Teapot emoldurada como obra",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "macro-textura",
@@ -207,11 +335,30 @@
       ],
       "dicas": [
         "Tire o close você mesmo, bem perto e com o celular firme. A IA só melhora a luz, ela não deve criar o detalhe.",
-        "Use junto com uma foto inteira do produto: o close mostra o acabamento, a foto inteira mostra a peça."
+        "Use junto com uma foto inteira do produto: o close mostra o acabamento, a foto inteira mostra a peça.",
+        "No teste com um close de só 180 × 120 px, as duas IAs inventaram o acabamento da tampa (o ChatGPT mudou até o formato do puxador). Use um close nítido, de boa resolução."
       ],
       "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/macro-textura-antes.jpg",
+          "depois": "assets/img/exemplos/macro-textura-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/macro-textura-antes.jpg",
+          "depois": "assets/img/exemplos/macro-textura-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     },
     {
       "id": "na-mao",
@@ -237,9 +384,27 @@
         "Ótimo para pins, adesivos, isqueiros, cinzeiros e outras peças pequenas.",
         "Confira dedos e unhas no resultado: é onde a IA mais erra."
       ],
-      "status": "em-teste",
-      "testado_com": [],
-      "exemplos": []
+      "status": "aprovado",
+      "testado_com": [
+        "Gemini",
+        "ChatGPT"
+      ],
+      "exemplos": [
+        {
+          "ferramenta": "Gemini",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/na-mao-depois-gemini.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        },
+        {
+          "ferramenta": "ChatGPT",
+          "antes": "assets/img/exemplos/utah-teapot-antes.jpg",
+          "depois": "assets/img/exemplos/na-mao-depois-chatgpt.jpg",
+          "descricao": "bule de porcelana branca (Utah Teapot)",
+          "credito": "Utah Teapot, 1989, domínio público (Wikimedia Commons)"
+        }
+      ]
     }
   ],
   "ias_dos_exemplos": [

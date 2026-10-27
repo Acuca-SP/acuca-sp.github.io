@@ -140,7 +140,7 @@ input[type=checkbox], input[type=radio] { accent-color: var(--vermelho); }
 .antes-depois { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .antes-depois figure { margin: 0; }
 .antes-depois .vazio { aspect-ratio: 4 / 5; border: 2px dashed var(--cinza-claro); border-radius: var(--raio); display: grid; place-items: center; text-align: center; padding: 16px; color: var(--cinza); font-size: 14px; }
-.antes-depois img { aspect-ratio: 4 / 5; object-fit: contain; width: 100%; border-radius: var(--raio); background: var(--gelo); }
+.antes-depois img { aspect-ratio: 4 / 5; object-fit: contain; width: 100%; height: auto; border-radius: var(--raio); background: var(--gelo); }
 .antes-depois figcaption { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; margin-top: 6px; color: var(--cinza); }
 .codigo { position: relative; }
 .codigo pre { margin: 0; background: var(--preto); color: #f1f1f1; padding: 54px 18px 18px; border-radius: var(--raio); white-space: pre-wrap; word-break: break-word;
@@ -155,7 +155,7 @@ input[type=checkbox], input[type=radio] { accent-color: var(--vermelho); }
 .passos li::before { content: counter(passo); position: absolute; left: 0; top: -2px; width: 34px; height: 34px; border-radius: 50%; background: var(--vermelho);
   color: var(--branco); font-weight: 800; display: grid; place-items: center; }
 .aviso { border-left: 4px solid var(--vermelho); background: var(--branco); padding: 14px 18px; border-radius: 0 var(--raio) var(--raio) 0; }
-@media (max-width: 560px) { .antes-depois { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .antes-depois { gap: 8px; } .antes-depois .vazio { padding: 8px; font-size: 12px; } }
 
 /* ---------- marca d'água ---------- */
 .estudio { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 24px; align-items: start; }
