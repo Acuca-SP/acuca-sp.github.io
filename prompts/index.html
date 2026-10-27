@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia de prompts para foto de produto · ACUCARTE</title>
+  <meta name="description" content="Prompts em inglês para transformar a foto do seu produto ou obra em foto de estúdio com IA, com várias direções de arte. Uma ferramenta gratuita da ACUCARTE.">
+  <link rel="icon" href="../assets/img/simbolo-acuca.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,600;1,700&family=Montserrat:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="../"><img src="../assets/img/logo-acucarte-claro.png" alt="ACUCARTE" width="910" height="122"></a>
+      <nav aria-label="Principal">
+        <a href="../#acuca">ACuCa</a>
+        <a href="../#acucarte">ACUCARTE</a>
+        <a href="../#ferramentas">Ferramentas</a>
+        <a href="./" aria-current="page">Guia de prompts</a>
+        <a href="../marca-dagua/">Marca d'água</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="cabeca">
+      <div class="wrap">
+        <p class="rotulo" style="color:var(--vermelho)">Ferramenta 1</p>
+        <h1>Guia de prompts para foto de produto</h1>
+        <p>Prompts em inglês para transformar uma foto feita no celular em foto de fotógrafo de produto. Escolha a direção de arte, preencha o que é o seu produto, copie e cole na IA de imagem que você usa.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap grade g2">
+        <div>
+          <h2>Como usar</h2>
+          <ol class="passos">
+            <li><strong>Tire uma foto honesta.</strong> Produto inteiro, de frente, com luz do dia e fundo limpo. Sem filtro.</li>
+            <li><strong>Abra uma IA que edita imagens.</strong> ChatGPT, Gemini e outras aceitam enviar uma foto junto com o texto.</li>
+            <li><strong>Escolha a direção de arte</strong> abaixo e preencha os campos em vermelho, em inglês, descrevendo o seu produto.</li>
+            <li><strong>Copie o prompt, envie com a foto</strong> e confira o resultado ao lado do original.</li>
+          </ol>
+        </div>
+        <div class="grade" style="align-content:start">
+          <div class="aviso">
+            <strong>O produto tem que continuar sendo o seu.</strong> Todos os prompts mandam a IA mudar só fundo, luz e enquadramento. Mesmo assim ela às vezes altera cores, textos ou detalhes. Se mudou, gere de novo. Vender com uma foto que não mostra a peça de verdade engana quem compra.
+          </div>
+          <div class="aviso">
+            <strong>Por que em inglês?</strong> As IAs de imagem seguem instruções técnicas de fotografia com mais precisão em inglês. Os campos em vermelho também devem ser preenchidos em inglês. Se precisar, peça para a própria IA traduzir.
+          </div>
+          <div class="aviso">
+            <strong>Status dos prompts.</strong> <span class="selo teste">em teste</span> quer dizer que o prompt ainda está sendo testado pelo coletivo. <span class="selo aprovado">aprovado</span> quer dizer que já foi testado e tem exemplo de antes e depois.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="branca" style="padding-top:56px">
+      <div class="wrap">
+        <h2>Direções de arte</h2>
+        <hr class="fio">
+        <div class="filtros" role="group" aria-label="Filtrar por tipo de trabalho">
+          <button type="button" data-filtro="" aria-pressed="true">Todos</button>
+          <button type="button" data-filtro="produto" aria-pressed="false">Produtos</button>
+          <button type="button" data-filtro="obra" aria-pressed="false">Obras de arte</button>
+          <button type="button" data-filtro="textil" aria-pressed="false">Têxtil e bordado</button>
+          <button type="button" data-filtro="pequeno" aria-pressed="false">Peças pequenas</button>
+        </div>
+        <div id="lista" aria-live="polite"><p class="mudo">Carregando os prompts…</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Testou um prompt?</h2>
+        <p class="lead">Mande para a ACUCARTE a foto original e o resultado, dizendo qual IA usou. Os melhores pares viram o exemplo de antes e depois desta página, com crédito para você, e o prompt passa para <span class="selo aprovado">aprovado</span>.</p>
+        <div class="botoes">
+          <a class="btn" href="https://instagram.com/acucarte_acuca">Falar com @acucarte_acuca</a>
+          <a class="btn contorno" href="https://github.com/Acuca-SP/acuca-sp.github.io/issues/new?title=Teste+de+prompt">Abrir uma issue no GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap">
+      <img src="../assets/img/logo-acuca-branco.png" alt="ACuCa-SP" width="852" height="634">
+      <div>
+        <a href="https://instagram.com/acucasp">@acucasp</a> · <a href="https://instagram.com/acucarte_acuca">@acucarte_acuca</a> ·
+        <a href="https://www.acucasp.org.br">acucasp.org.br</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/prompts.js" defer></script>
+</body>
+</html>

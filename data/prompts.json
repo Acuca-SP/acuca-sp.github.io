@@ -1,0 +1,173 @@
+{
+  "versao": 1,
+  "atualizado_em": "2026-10-27",
+  "regra_de_preservacao": "Use the attached photo as the only reference for the product. Keep the product exactly as it is: same shape, proportions, colors, materials, textures, printed text, logos and artwork details. Do not redraw, restyle, add or remove anything on the product itself. Only change the background, lighting, shadows, reflections and framing.",
+  "prompts": [
+    {
+      "id": "ajuste-fino",
+      "titulo": "Ajuste fino · mesma cena",
+      "direcao": "Mantém a foto como está e corrige só o técnico: luz, cor, foco, poeira e alinhamento. É o ponto de partida mais seguro.",
+      "categorias": ["produto", "obra", "textil", "pequeno"],
+      "formato": "o mesmo da foto original",
+      "prompt": "Retouch this photo of [PRODUCT] like a professional product photographer would in post-production. {PRESERVACAO} Keep the same scene, background and composition. Correct the exposure and white balance so whites are neutral and colors are true to life, recover shadows and highlights, straighten the horizon and correct lens distortion, remove dust, lint, fingerprints and small distracting spots from the background, and increase clarity and sharpness slightly without adding artificial texture or halos. The result must look like a well-lit, high-resolution photograph, not an illustration.",
+      "variaveis": [
+        { "nome": "PRODUCT", "exemplo": "a hand-painted ceramic ashtray" }
+      ],
+      "dicas": [
+        "Use quando a foto já está boa de enquadramento e só precisa de acabamento.",
+        "Se a IA mudar a cor do produto, peça de novo acrescentando: \"Match the product colors to the original photo exactly.\""
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "estudio-branco",
+      "titulo": "Estúdio · fundo infinito branco",
+      "direcao": "A foto de catálogo clássica: produto centralizado, fundo branco puro, sombra suave. Ideal para loja virtual e marketplaces.",
+      "categorias": ["produto", "pequeno", "textil"],
+      "formato": "1:1 (quadrado)",
+      "prompt": "Transform this photo of [PRODUCT] into a professional e-commerce studio product photograph. {PRESERVACAO} Place the product on a seamless pure white infinity background (#FFFFFF), centered, filling about 70% of the frame. Lighting: a large softbox key light from the front-left at 45 degrees and a white fill card on the right, soft and even, with no blown highlights. Add a subtle, natural contact shadow directly under the product so it does not float. Shot on a full-frame camera with a 100mm macro lens at f/8: tack-sharp focus across the whole product, true-to-life colors, neutral white balance (5500K). Clean, crisp, high-resolution catalog photography. No props, no text, no watermark. Square 1:1 format.",
+      "variaveis": [
+        { "nome": "PRODUCT", "exemplo": "a handmade embroidered tote bag" }
+      ],
+      "dicas": [
+        "Fotografe o original de frente, com o produto inteiro na foto e sem cortar as bordas.",
+        "Para marketplaces que exigem fundo branco, confira se o fundo ficou realmente branco (#FFFFFF) e não cinza-claro."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "cor-solida",
+      "titulo": "Pop · fundo de cor sólida",
+      "direcao": "Fundo de uma cor só, luz dura e sombra marcada. Gráfico e chamativo, ótimo para feed e anúncio.",
+      "categorias": ["produto", "pequeno"],
+      "formato": "4:5 (vertical, feed do Instagram)",
+      "prompt": "Transform this photo of [PRODUCT] into a bold, contemporary studio product photograph. {PRESERVACAO} Place the product on a seamless solid [BACKGROUND COLOR] paper backdrop with a floor of the same color. Hard directional light from the upper right casts a crisp, well-defined shadow diagonally across the floor, and a small rim light separates the product from the background. Product colors stay saturated and faithful; the background color must not tint or reflect onto the product. 85mm lens at f/11, everything in sharp focus. Minimalist, graphic, pop-art inspired composition with generous negative space above the product. 4:5 vertical format.",
+      "variaveis": [
+        { "nome": "PRODUCT", "exemplo": "a pair of resin earrings shaped like leaves" },
+        { "nome": "BACKGROUND COLOR", "exemplo": "coral red (#EE3A4C)" }
+      ],
+      "dicas": [
+        "Escolha uma cor que contraste com o produto: produto claro em fundo forte, produto colorido em fundo neutro como areia ou cinza.",
+        "Para uma série de fotos do mesmo produto, mantenha a mesma cor em todas."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "luz-natural",
+      "titulo": "Lifestyle · luz de janela",
+      "direcao": "O produto em casa, sobre uma mesa de madeira, com luz natural suave. Passa aconchego e mostra o produto em uso.",
+      "categorias": ["produto", "textil", "pequeno"],
+      "formato": "4:5 (vertical)",
+      "prompt": "Transform this photo of [PRODUCT] into an authentic editorial lifestyle photograph. {PRESERVACAO} Place the product on a light oak wooden table next to a window in a calm, lived-in home. Soft natural morning daylight comes from the side through a sheer linen curtain, with gentle long shadows and a warm but natural color balance. Background: softly blurred plants and a neutral plaster wall, shallow depth of field (50mm lens at f/2.8) with the product in perfect focus. Add at most one or two discreet neutral props, such as a ceramic cup or a folded linen cloth, that do not touch or cover the product. Natural, believable, not over-styled. 4:5 vertical format.",
+      "variaveis": [
+        { "nome": "PRODUCT", "exemplo": "a handmade plush toy" }
+      ],
+      "dicas": [
+        "Se a IA colocar objetos demais, troque \"one or two discreet neutral props\" por \"no props\".",
+        "Funciona bem para peças de casa: almofadas, cerâmica, quadros pequenos, pelúcias."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "editorial-escuro",
+      "titulo": "Editorial escuro · low key",
+      "direcao": "Fundo preto, luz de contorno e clima de revista. Dá ar sofisticado a peças de design, vidro, metal e escultura.",
+      "categorias": ["produto", "obra", "pequeno"],
+      "formato": "4:5 (vertical)",
+      "prompt": "Transform this photo of [PRODUCT] into a luxury editorial still-life photograph. {PRESERVACAO} Place the product on a matte black surface against a deep charcoal background. Dramatic low-key lighting: a single strip softbox behind and to the side creates an elegant rim light that outlines the product's silhouette, plus a very soft frontal fill so details and true colors remain clearly visible. Subtle reflection on the surface, rich deep blacks without noise or banding. High-end magazine mood. 90mm lens at f/8, the whole product in sharp focus. 4:5 vertical format.",
+      "variaveis": [
+        { "nome": "PRODUCT", "exemplo": "a 3D-printed sculpture in matte green resin" }
+      ],
+      "dicas": [
+        "Evite com produtos pretos ou muito escuros: eles somem no fundo. Nesse caso use a direção Pop com fundo claro.",
+        "Bom para escultura, peças de vidro e metal, e objetos com brilho."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "flat-lay",
+      "titulo": "Flat lay · vista de cima",
+      "direcao": "Foto tirada de cima, com o produto no centro de uma superfície com textura e alguns objetos de apoio nas bordas.",
+      "categorias": ["produto", "textil", "pequeno"],
+      "formato": "1:1 (quadrado)",
+      "prompt": "Transform this top-down photo of [PRODUCT] into a professional flat lay photograph shot from directly above (90 degrees). {PRESERVACAO} Place the product in the center of a textured [SURFACE] surface. Soft, even, diffused light from above with gentle natural shadows. Arrange a few small complementary props around the edges, such as dried flowers, natural fibers or a pencil, with intentional, balanced spacing; props must never overlap or touch the product. Clean, magazine-style composition with accurate perspective and no distortion of the product. Square 1:1 format.",
+      "variaveis": [
+        { "nome": "PRODUCT", "exemplo": "an illustrated sticker sheet and two enamel pins" },
+        { "nome": "SURFACE", "exemplo": "off-white linen" }
+      ],
+      "dicas": [
+        "A foto original precisa ter sido tirada de cima. A IA não deve inventar outro ângulo do produto.",
+        "Superfícies que funcionam bem: linho cru, papel kraft, granilite claro, madeira clara."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "galeria",
+      "titulo": "Galeria · obra na parede",
+      "direcao": "A pintura, gravura ou ilustração pendurada na parede branca de uma galeria, com luz de museu e escala real.",
+      "categorias": ["obra"],
+      "formato": "4:5 (vertical)",
+      "prompt": "Place this artwork, [ARTWORK], hanging on a clean white wall of a contemporary art gallery. Reproduce the artwork exactly as in the attached photo: same composition, colors, brushstrokes, signature and proportions. Do not reinterpret, crop, repaint or extend it. Correct any perspective distortion and glare from the original photo so the piece looks perfectly flat and frontal. Museum lighting: even warm-white track spotlights from above with a soft gradient on the wall and no reflections on the artwork. Polished concrete floor, generous negative space, and realistic scale relative to the wall for a piece measuring [SIZE]. Photorealistic gallery documentation photography. 4:5 vertical format.",
+      "variaveis": [
+        { "nome": "ARTWORK", "exemplo": "an acrylic painting on canvas" },
+        { "nome": "SIZE", "exemplo": "60 x 80 cm" }
+      ],
+      "dicas": [
+        "Fotografe a obra de frente, inteira, com luz do dia e sem reflexo. Quanto melhor o original, mais fiel o resultado.",
+        "Confira o resultado lado a lado com a obra: a IA não pode mudar nenhum detalhe do seu trabalho. Se mudar, gere de novo."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "macro-textura",
+      "titulo": "Macro · detalhe e textura",
+      "direcao": "Valoriza um close que você já fotografou: luz rasante revela pontos de bordado, fios, pinceladas e relevo.",
+      "categorias": ["textil", "obra", "produto"],
+      "formato": "1:1 (quadrado)",
+      "prompt": "Enhance this close-up photo of [DETAIL] into a professional macro detail photograph. Keep every thread, stitch, brushstroke, grain and color exactly as in the original photo; do not invent new details, patterns or text. Relight the scene with a low raking light from the side to reveal the texture and relief of the material, add a soft fill to keep the shadows open, increase micro-contrast and sharpness naturally without halos or artificial texture, and correct the white balance to true-to-life colors. Shallow depth of field with the main detail in perfect focus. 100mm macro lens look. Square 1:1 format.",
+      "variaveis": [
+        { "nome": "DETAIL", "exemplo": "free embroidery stitches on cotton fabric" }
+      ],
+      "dicas": [
+        "Tire o close você mesmo, bem perto e com o celular firme. A IA só melhora a luz, ela não deve criar o detalhe.",
+        "Use junto com uma foto inteira do produto: o close mostra o acabamento, a foto inteira mostra a peça."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    },
+    {
+      "id": "na-mao",
+      "titulo": "Na mão · escala real",
+      "direcao": "O produto segurado por uma mão, com a rua desfocada ao fundo. Mostra o tamanho real de peças pequenas.",
+      "categorias": ["pequeno", "produto"],
+      "formato": "4:5 (vertical)",
+      "prompt": "Transform this photo of [PRODUCT] into a natural lifestyle photograph of the product held in a hand. {PRESERVACAO} A relaxed, natural-looking hand [HAND] holds the product toward the camera at a realistic scale, with the product unobstructed and fully visible. Background: a softly blurred urban street scene in late-afternoon golden light, strong bokeh (50mm lens at f/1.8), with the product in perfect focus. Realistic skin texture and anatomy (five fingers, natural nails). Authentic, candid, social-media-ready look. 4:5 vertical format.",
+      "variaveis": [
+        { "nome": "PRODUCT", "exemplo": "a small enamel pin with a cannabis leaf design" },
+        { "nome": "HAND", "exemplo": "with short natural nails and a silver ring" }
+      ],
+      "dicas": [
+        "Ótimo para pins, adesivos, isqueiros, cinzeiros e outras peças pequenas.",
+        "Confira dedos e unhas no resultado: é onde a IA mais erra."
+      ],
+      "status": "em-teste",
+      "testado_com": [],
+      "exemplo": null
+    }
+  ]
+}

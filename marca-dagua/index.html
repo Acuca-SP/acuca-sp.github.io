@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marca d'água para fotos · ACUCARTE</title>
+  <meta name="description" content="Coloque seu @ do Instagram, site ou nome nas suas fotos, com vários padrões, posições, cores e opacidades. Gratuito, e as fotos não saem do seu aparelho.">
+  <link rel="icon" href="../assets/img/simbolo-acuca.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,600;1,700&family=Montserrat:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="../"><img src="../assets/img/logo-acucarte-claro.png" alt="ACUCARTE" width="910" height="122"></a>
+      <nav aria-label="Principal">
+        <a href="../#acuca">ACuCa</a>
+        <a href="../#acucarte">ACUCARTE</a>
+        <a href="../#ferramentas">Ferramentas</a>
+        <a href="../prompts/">Guia de prompts</a>
+        <a href="./" aria-current="page">Marca d'água</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="cabeca">
+      <div class="wrap">
+        <p class="rotulo" style="color:var(--vermelho)">Ferramenta 2</p>
+        <h1>Marca d'água</h1>
+        <p>Coloque seu @ do Instagram, site ou nome nas fotos antes de postar. Escolha o padrão, a posição, a cor e a opacidade e baixe uma foto ou todas de uma vez. <strong>As fotos não saem do seu aparelho</strong>: tudo acontece aqui, no navegador.</p>
+      </div>
+    </div>
+
+    <section style="padding-top:32px">
+      <div class="wrap estudio">
+        <div>
+          <div class="palco" id="palco">
+            <label class="soltar" id="soltar" for="arquivos">
+              <strong>Escolha as fotos</strong> ou arraste para cá.<br>
+              <span class="dica">JPG, PNG ou WEBP. Pode escolher várias de uma vez.</span>
+            </label>
+            <canvas id="tela" hidden aria-label="Prévia da foto com a marca d'água"></canvas>
+          </div>
+          <input type="file" id="arquivos" accept="image/jpeg,image/png,image/webp,image/gif,image/avif,image/heic" multiple class="sr-only">
+          <div class="miniaturas" id="miniaturas" aria-label="Fotos carregadas"></div>
+          <p class="dica" id="status" role="status"></p>
+        </div>
+
+        <form class="painel" id="painel" autocomplete="off">
+          <fieldset>
+            <legend>Texto</legend>
+            <div class="campo"><label for="arroba">@ do Instagram</label><input type="text" id="arroba" name="arroba" placeholder="@seuperfil"></div>
+            <div class="campo"><label for="site">Site</label><input type="text" id="site" name="site" placeholder="seusite.com.br"></div>
+            <div class="campo"><label for="nome">Nome</label><input type="text" id="nome" name="nome" placeholder="Seu nome artístico"></div>
+            <label class="linha" style="font-weight:400"><input type="checkbox" name="copyright"> <span>Incluir © e o ano</span></label>
+            <div class="campo">
+              <span id="rot-arranjo" style="font-weight:600;font-size:14px">Arranjo</span>
+              <div class="chips" role="radiogroup" aria-labelledby="rot-arranjo">
+                <label><input type="radio" name="arranjo" value="linha" checked><span>Uma linha</span></label>
+                <label><input type="radio" name="arranjo" value="empilhado"><span>Empilhado</span></label>
+              </div>
+            </div>
+            <div class="campo"><label for="fonte">Fonte</label>
+              <select id="fonte" name="fonte">
+                <option value="montserrat-forte">Montserrat forte</option>
+                <option value="montserrat">Montserrat leve</option>
+                <option value="serifa">Serifa itálica (ACUCARTE)</option>
+                <option value="maquina">Máquina de escrever</option>
+                <option value="classica">Clássica</option>
+              </select>
+            </div>
+            <label class="linha" style="font-weight:400"><input type="checkbox" name="maiusculas"> <span>Tudo em maiúsculas</span></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Padrão</legend>
+            <div class="chips" role="radiogroup" aria-label="Padrão da marca d'água">
+              <label><input type="radio" name="padrao" value="unico" checked><span>Único</span></label>
+              <label><input type="radio" name="padrao" value="cantos"><span>Quatro cantos</span></label>
+              <label><input type="radio" name="padrao" value="mosaico"><span>Mosaico</span></label>
+              <label><input type="radio" name="padrao" value="diagonal"><span>Diagonal</span></label>
+              <label><input type="radio" name="padrao" value="faixa"><span>Faixa</span></label>
+            </div>
+            <div class="campo" data-para="unico faixa">
+              <span id="rot-posicao" style="font-weight:600;font-size:14px">Posição</span>
+              <div class="posicoes" role="radiogroup" aria-labelledby="rot-posicao">
+                <label><input type="radio" name="posicao" value="tl" aria-label="Em cima, à esquerda"><span></span></label>
+                <label><input type="radio" name="posicao" value="tc" aria-label="Em cima, no centro"><span></span></label>
+                <label><input type="radio" name="posicao" value="tr" aria-label="Em cima, à direita"><span></span></label>
+                <label><input type="radio" name="posicao" value="ml" aria-label="No meio, à esquerda"><span></span></label>
+                <label><input type="radio" name="posicao" value="mc" aria-label="No centro"><span></span></label>
+                <label><input type="radio" name="posicao" value="mr" aria-label="No meio, à direita"><span></span></label>
+                <label><input type="radio" name="posicao" value="bl" aria-label="Embaixo, à esquerda"><span></span></label>
+                <label><input type="radio" name="posicao" value="bc" aria-label="Embaixo, no centro"><span></span></label>
+                <label><input type="radio" name="posicao" value="br" aria-label="Embaixo, à direita" checked><span></span></label>
+              </div>
+            </div>
+            <div class="campo"><label for="tamanho">Tamanho <span class="valor" data-valor="tamanho"></span></label><input type="range" id="tamanho" name="tamanho" min="1" max="20" step="0.5" value="4"></div>
+            <div class="campo" data-para="unico cantos faixa"><label for="margem">Distância da borda <span class="valor" data-valor="margem"></span></label><input type="range" id="margem" name="margem" min="0" max="15" step="0.5" value="3"></div>
+            <div class="campo" data-para="mosaico diagonal"><label for="espaco">Espaçamento <span class="valor" data-valor="espaco"></span></label><input type="range" id="espaco" name="espaco" min="20" max="400" step="10" value="120"></div>
+            <div class="campo" data-para="unico cantos mosaico diagonal"><label for="rotacao">Inclinação <span class="valor" data-valor="rotacao"></span></label><input type="range" id="rotacao" name="rotacao" min="-90" max="90" step="1" value="0"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Cor e efeito</legend>
+            <div class="campo">
+              <label for="cor">Cor do texto</label>
+              <div class="cores">
+                <input type="color" id="cor" name="cor" value="#ffffff">
+                <button type="button" data-cor="#ffffff" style="background:#fff" aria-label="Branco"></button>
+                <button type="button" data-cor="#121212" style="background:#121212" aria-label="Preto"></button>
+                <button type="button" data-cor="#ee3a4c" style="background:#ee3a4c" aria-label="Vermelho ACUCARTE"></button>
+                <button type="button" data-cor="#8c8c8c" style="background:#8c8c8c" aria-label="Cinza"></button>
+                <button type="button" data-cor="#f4d35e" style="background:#f4d35e" aria-label="Amarelo"></button>
+              </div>
+            </div>
+            <div class="campo"><label for="opacidade">Opacidade <span class="valor" data-valor="opacidade"></span></label><input type="range" id="opacidade" name="opacidade" min="5" max="100" step="1" value="70"></div>
+            <label class="linha" style="font-weight:400"><input type="checkbox" name="sombra" checked> <span>Sombra (ajuda a ler em qualquer fundo)</span></label>
+            <label class="linha" style="font-weight:400"><input type="checkbox" name="contorno"> <span>Contorno</span></label>
+            <label class="linha" style="font-weight:400"><input type="checkbox" name="tarja"> <span>Tarja atrás do texto</span></label>
+            <div class="linha" data-para-tarja>
+              <input type="color" name="corTarja" value="#121212" aria-label="Cor da tarja">
+              <div class="campo"><label for="opTarja">Opacidade da tarja <span class="valor" data-valor="opTarja"></span></label><input type="range" id="opTarja" name="opTarja" min="5" max="100" step="1" value="45"></div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Logo (opcional)</legend>
+            <p class="dica">Um PNG com fundo transparente fica melhor. Ele aparece ao lado do texto.</p>
+            <div class="linha">
+              <label class="btn sm contorno" for="logo" style="flex:0 0 auto">Escolher logo</label>
+              <button type="button" class="btn sm contorno" id="tirarLogo" hidden style="flex:0 0 auto">Remover</button>
+              <span class="dica" id="nomeLogo"></span>
+            </div>
+            <input type="file" id="logo" accept="image/png,image/svg+xml,image/webp,image/jpeg" class="sr-only">
+          </fieldset>
+
+          <fieldset>
+            <legend>Baixar</legend>
+            <div class="linha">
+              <div class="campo"><label for="formato">Formato</label>
+                <select id="formato" name="formato">
+                  <option value="image/jpeg">JPG (menor, para redes)</option>
+                  <option value="image/png">PNG (sem perda)</option>
+                  <option value="image/webp">WEBP</option>
+                </select>
+              </div>
+              <div class="campo" data-para-qualidade><label for="qualidade">Qualidade <span class="valor" data-valor="qualidade"></span></label><input type="range" id="qualidade" name="qualidade" min="50" max="100" step="1" value="92"></div>
+            </div>
+            <p class="dica">A foto baixada sai no tamanho original. A marca d'água fica gravada na imagem.</p>
+          </fieldset>
+
+          <div class="acoes">
+            <button type="button" class="btn" id="baixar" disabled>Baixar esta foto</button>
+            <button type="button" class="btn contorno" id="baixarTodas" disabled>Baixar todas (.zip)</button>
+            <button type="button" class="btn contorno" id="compartilhar" hidden disabled>Compartilhar</button>
+            <button type="button" class="btn contorno sm" id="restaurar">Restaurar padrão</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap">
+      <img src="../assets/img/logo-acuca-branco.png" alt="ACuCa-SP" width="852" height="634">
+      <div>
+        <a href="https://instagram.com/acucasp">@acucasp</a> · <a href="https://instagram.com/acucarte_acuca">@acucarte_acuca</a> ·
+        <a href="https://www.acucasp.org.br">acucasp.org.br</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/zip.js" defer></script>
+  <script src="../assets/js/marca-dagua.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+# acuca-sp.github.io: instruções para agentes
+
+Site público da ACuCa-SP e da ACUCARTE no GitHub Pages: apresentação da associação e do coletivo, e ferramentas
+gratuitas para artistas. Publicado em https://acuca-sp.github.io a partir da branch `main` (sem etapa de build).
+
+## Regras
+- **Idioma:** textos do site, commits e documentação em português do Brasil. **Os prompts (`data/prompts.json` → `prompt`) são em inglês.**
+- **Toda alteração vira commit e vai para o GitHub (`git push`) logo em seguida.** Commits pequenos, mensagem em português
+  dizendo o que mudou (ex.: `Prompts: nova direção "vitrine de feira"`). O push na `main` publica o site em ~1 minuto.
+- **Site estático puro:** HTML, CSS e JavaScript sem framework, sem build e sem dependências de npm. Não adicione bundler.
+  Bibliotecas externas, só se não houver alternativa simples (o ZIP da marca d'água é próprio, em `assets/js/zip.js`).
+- **Privacidade:** a ferramenta de marca d'água nunca envia fotos para servidor. Nada de analytics, rastreadores ou
+  chamadas de rede com dados de quem usa. `localStorage` só guarda as preferências do formulário.
+- **Honestidade nos prompts:** um prompt só fica `"aprovado"` depois de testado por uma pessoa, com o par real de
+  antes/depois em `assets/img/exemplos/` e a IA usada em `testado_com`. Nunca invente resultado nem gere "depois" falso.
+- **Identidade visual:** preto `#121212`, vermelho `#ee3a4c`, branco e gelo `#f4f1ec`; títulos em Noto Serif itálica,
+  texto em Montserrat (tokens em `assets/css/style.css`). Siga o que já existe.
+- Acessibilidade: rótulos em todos os campos, foco visível, contraste AA, `alt` em imagens, funciona no celular (375px).
+
+## Estrutura
+| Caminho | O que é |
+| --- | --- |
+| `index.html` | Apresentação da ACuCa e da ACUCARTE e cartões das ferramentas |
+| `prompts/` + `assets/js/prompts.js` | Guia de prompts; os dados vêm de `data/prompts.json` |
+| `data/prompts.json` | Prompts, direções de arte, variáveis `[EM COLCHETES]`, status e exemplos. `{PRESERVACAO}` é trocado por `regra_de_preservacao` |
+| `marca-dagua/` + `assets/js/marca-dagua.js` | Ferramenta de marca d'água (canvas; prévia reduzida, exportação no tamanho original) |
+| `assets/js/zip.js` | ZIP sem compressão usado no "Baixar todas" |
+| `assets/img/exemplos/` | Pares de antes e depois dos prompts (`<id>-antes.jpg`, `<id>-depois.jpg`) |
+| `tests/validar-prompts.mjs` | Validação do `prompts.json` (roda também no GitHub Actions) |
+
+## Verificar antes de publicar
+1. `node tests/validar-prompts.mjs` precisa terminar com ✓.
+2. Servir localmente: `python3 -m http.server 8790` na raiz do repositório e abrir http://localhost:8790.
+3. Conferir no navegador a página alterada, no desktop e em 375px de largura, e o console sem erros.
+   Na marca d'água: carregar uma foto, trocar os cinco padrões e baixar uma foto e o .zip.
+
+## Skills e agents
+- `.claude/skills/novo-prompt`: adicionar ou editar uma direção de arte no guia.
+- `.claude/skills/exemplo-antes-depois`: publicar o par de fotos testado e aprovar o prompt.
+- `.claude/skills/publicar-pages`: verificar, commitar, enviar e conferir o site no ar.
+- `.claude/agents/revisor-conteudo.md`: revisa textos, prompts, identidade visual e acessibilidade.
+- `.claude/agents/testador-ferramentas.md`: testa as páginas e as ferramentas no navegador e relata o que quebrou.
+
+## Contexto
+- ACuCa-SP: Associação Cultural Cannábica de São Paulo, desde 2012, formalizada em 2017; organiza a Marcha da Maconha SP.
+- ACUCARTE: rama artística da ACuCa; 28 artistas e 4 marcas/projetos; direção artística de Rafael Roque, curadoria de Gabi Mazzariello.
+- Site institucional e loja: repositório privado `Acuca-SP/acuca-site` (Astro + Cloudflare), em https://www.acucasp.org.br.
