@@ -284,3 +284,13 @@ input[type=checkbox], input[type=radio] { accent-color: var(--vermelho); }
 .artigo-cartao.proximo { border-top: 4px dashed var(--cinza-claro); }
 @media (max-width: 560px) { .glossario { grid-template-columns: 1fr; gap: 2px; } .glossario dd { margin-bottom: 10px; } }
 .artigo .linha-tempo time { color: var(--vermelho-escuro); }
+
+/* Tabela dos artigos (rola para o lado no celular) */
+.tabela-rolagem { overflow-x: auto; margin: 16px 0 20px; }
+.tabela-jogos { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 15px; }
+.tabela-jogos th, .tabela-jogos td { padding: 10px 12px; border-bottom: 1px solid rgba(18,18,18,.15); text-align: left; vertical-align: top; }
+.tabela-jogos thead th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; border-bottom: 2px solid var(--preto); }
+.tabela-jogos td:nth-child(2), .tabela-jogos td:nth-child(3) { white-space: nowrap; }
+.tabela-jogos tr.sim { background: rgba(238,58,76,.10); }
+.tabela-jogos tr.sim td:last-child { color: var(--vermelho-escuro); font-weight: 600; }
+.tabela-jogos tr.parte { background: rgba(238,58,76,.04); }
