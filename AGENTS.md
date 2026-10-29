@@ -16,7 +16,7 @@ gratuitas para artistas. Publicado em https://acuca-sp.github.io a partir da bra
 - **Identidade visual:** preto `#121212`, vermelho `#ee3a4c`, branco e gelo `#f4f1ec`; títulos em Noto Serif itálica,
   texto em Montserrat (tokens em `assets/css/style.css`). Siga o que já existe.
 - Acessibilidade: rótulos em todos os campos, foco visível, contraste AA, `alt` em imagens, funciona no celular (375px).
-- **Links abrem em outra aba:** todo `<a>` leva `target="_blank" rel="noopener"`, menos as âncoras da mesma página (`href="#..."`).
+- **Links externos abrem em outra aba:** todo `<a>` para outro site leva `target="_blank" rel="noopener"`. Links internos (páginas, âncoras e arquivos deste site) abrem na mesma aba, sem `target`.
 - **Imagens sem metadados:** antes de commitar imagem nova, rode `exiftool -all= -overwrite_original <arquivo>`.
   Não grave dados inventados (câmera, data, autor) nos arquivos: os "depois" dos exemplos são gerados por IA e o site diz isso.
 - **Cache:** o GitHub Pages guarda CSS e JS por 10 minutos. Mudou `assets/css` ou `assets/js`? Troque o `?v=AAAAMMDDhhmm`

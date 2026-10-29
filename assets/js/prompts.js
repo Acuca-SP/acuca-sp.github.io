@@ -58,7 +58,7 @@
     // de cada uma é proporcional a ela, então ficam com a mesma altura (até ALTURA_MAX px) e ocupam a linha inteira
     const ALTURA_MAX = 400;
     const foto = (src, [w, h], alt, legenda, classe) => el('figure', { class: classe },
-      el('a', { href: `../${src}`, target: '_blank', rel: 'noopener', title: 'Abrir a foto em tamanho cheio' },
+      el('a', { href: `../${src}`, title: 'Abrir a foto em tamanho cheio' },
         el('img', { src: `../${src}`, alt, loading: 'lazy', width: w, height: h })),
       el('figcaption', { text: legenda }));
     const original = lista[0];
