@@ -10,7 +10,7 @@ Sirva o site com `python3 -m http.server 8790` na raiz do repositório (se ainda
 disponível na sessão.
 
 ## Roteiro
-1. **Todas as páginas** (`/`, `/prompts/`, `/marca-dagua/`, `/expocannabis/`, `/404.html`): carregam sem erro no console, links do menu
+1. **Todas as páginas** (`/`, `/prompts/`, `/marca-dagua/`, `/expocannabis/`, `/letramento/` e cada artigo, `/404.html`): carregam sem erro no console, links do menu
    funcionam, sem rolagem horizontal em 375px de largura.
 2. **Guia de prompts:** `node tests/validar-prompts.mjs` passa; os cartões aparecem; cada filtro mostra só as categorias
    certas; digitar num campo `[VARIÁVEL]` atualiza o texto; "Copiar prompt" copia o texto com os valores preenchidos;

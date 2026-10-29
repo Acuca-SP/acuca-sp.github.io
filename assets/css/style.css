@@ -256,3 +256,23 @@ input[type=checkbox], input[type=radio] { accent-color: var(--vermelho); }
 .setor-tag.cultural { background: var(--vermelho-escuro); }
 .setor-tag.externa { background: #3d5a40; }
 @media (max-width: 860px) { .expo { grid-template-columns: 1fr; } }
+
+/* ---------- autogestão e letramento digital ---------- */
+.artigo { padding: 48px 0 72px; }
+.artigo .wrap { max-width: 780px; }
+.artigo h2 { margin-top: 48px; }
+.artigo h3 { margin-top: 32px; }
+.artigo h4 { font: 800 13px var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--vermelho-escuro); margin: 0 0 8px; }
+.artigo p, .artigo li { font-size: 1.05rem; }
+.artigo li + li { margin-top: 8px; }
+.artigo .cartao p { font-size: 15px; margin: 0; }
+.artigo .linha-tempo li { border-color: var(--cinza-claro); }
+.resumo-artigo ol { margin: 10px 0 0; padding-left: 20px; }
+.glossario { font-size: 15px; gap: 10px 20px; }
+.fontes { margin-top: 56px; padding: 24px; background: var(--branco); border-radius: var(--raio); }
+.fontes h2 { margin-top: 0; font-size: 1.4rem; }
+.fontes li { font-size: 14px !important; }
+.artigo-cartao ul { padding-left: 20px; margin: 0; }
+.artigo-cartao.proximo { border-top: 4px dashed var(--cinza-claro); }
+@media (max-width: 560px) { .glossario { grid-template-columns: 1fr; gap: 2px; } .glossario dd { margin-bottom: 10px; } }
+.artigo .linha-tempo time { color: var(--vermelho-escuro); }

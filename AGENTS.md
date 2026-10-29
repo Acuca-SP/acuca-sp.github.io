@@ -35,6 +35,7 @@ gratuitas para artistas. Publicado em https://acuca-sp.github.io a partir da bra
 | `tests/marca-dagua.html` | Teste da marca d'água no navegador: mexe em todas as opções e confere os pixels das fotos baixadas (70 verificações) |
 | `assets/img/marca-dagua/` | Exemplos da página inicial, gerados na própria ferramenta |
 | `expocannabis/` + `assets/js/expocannabis.js` | Mapa da ExpoCannabis 2026: setores da feira (esquema) e busca de expositores |
+| `letramento/` | Seção Autogestão e letramento digital: índice dos artigos e um artigo por pasta (`letramento/<slug>/index.html`) |
 | `data/expocannabis.json` | Setores, expositores e estandes copiados da lista oficial (`fonte_expositores`, `atualizado_em`). `planta_oficial` e `estande_acucarte` ficam `null` até a organização publicar |
 
 ## Verificar antes de publicar
@@ -55,5 +56,6 @@ gratuitas para artistas. Publicado em https://acuca-sp.github.io a partir da bra
 ## Contexto
 - ACuCa-SP: Associação Cultural Cannábica de São Paulo, desde 2012, formalizada em 2017; organiza a Marcha da Maconha SP.
 - ACUCARTE: rama artística da ACuCa; 28 artistas e 4 marcas/projetos; direção artística de Rafael Roque, curadoria de Gabi Mazzariello.
+- **Letramento digital:** todo dado com fonte e link na seção Fontes, data em que foi conferido no topo, os dois lados quando há disputa e nada afirmado sem documento (ex.: não acusar empresa de lobby sem registro). Artigo novo entra no índice `letramento/index.html` e no menu só se for seção nova.
 - **Mapa da Expo:** o desenho é esquemático. Não invente posição de estande nem planta; atualize a lista pela página oficial de expositores e troque `atualizado_em`.
 - Site institucional e loja: repositório privado `Acuca-SP/acuca-site` (Astro + Cloudflare), em https://www.acucasp.org.br.
