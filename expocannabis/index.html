@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mapa da ExpoCannabis 2026 · ACUCARTE</title>
-  <meta name="description" content="Mapa dos setores da ExpoCannabis Brasil 2026 no São Paulo Expo, com a lista oficial de expositores por pavilhão e estande, para artistas se localizarem antes da feira.">
+  <meta name="description" content="Onde fica a ExpoCannabis Brasil 2026 no São Paulo Expo, a lista oficial de expositores por setor e estande, horários e como chegar, com dados da organização e do São Paulo Expo.">
   <link rel="icon" href="../assets/img/simbolo-acuca.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,600;1,700&family=Montserrat:wght@400;600;700;800&display=swap">
-  <link rel="stylesheet" href="../assets/css/style.css?v=202610291100">
+  <link rel="stylesheet" href="../assets/css/style.css?v=202610291111">
 </head>
 <body>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -32,38 +32,91 @@
     <div class="cabeca">
       <div class="wrap">
         <h1>Mapa da ExpoCannabis 2026</h1>
-        <p><strong>20, 21 e 22 de novembro de 2026</strong>, no São Paulo Expo (Pavilhões 7 e 8 e área externa). Veja como a feira se divide, quem está em cada setor e procure qualquer expositor pelo nome, pelo @ ou pelo número do estande.</p>
+        <p>Onde fica a feira, quem expõe em cada setor e como chegar, com os dados oficiais da organização e do São Paulo Expo.</p>
+        <dl class="fatos">
+          <div><dt>Quando</dt><dd>20, 21 e 22 de novembro de 2026</dd></div>
+          <div><dt>Horário</dt><dd>das 11h às 20h</dd></div>
+          <div><dt>Onde</dt><dd>São Paulo Expo, Pavilhões 7 e 8 e área externa</dd></div>
+          <div><dt>Entrada</dt><dd>só para maiores de 18 anos</dd></div>
+        </dl>
       </div>
     </div>
 
-    <section style="padding-top:32px">
+    <section style="padding-top:40px">
       <div class="wrap">
-        <p class="aviso" id="aviso-planta"><strong>Mapa esquemático, fora de escala.</strong> A organização ainda não publicou a planta baixa oficial. Os setores e os números de estande vêm da <a href="https://expocannabisbrasil.com/expositores/" target="_blank" rel="noopener">lista oficial de expositores</a>, mas a posição de cada bloco no desenho é ilustrativa. Quando a planta oficial sair, ela entra aqui.</p>
-        <p class="aviso" id="estande-acucarte"></p>
+        <p class="rotulo">Planta do São Paulo Expo</p>
+        <h2>Onde fica a feira</h2>
+        <hr class="fio">
+        <p class="lead">O São Paulo Expo é uma fila de oito pavilhões. A ExpoCannabis fica na <strong>ponta oeste</strong>, nos Pavilhões 7 e 8. O estacionamento coberto fica na outra ponta, depois do Pavilhão 1.</p>
 
-        <div class="expo">
-          <div>
-            <div class="planta" role="group" aria-label="Setores da ExpoCannabis 2026 no São Paulo Expo (esquema)">
-              <div class="pavilhao p7">
-                <p class="nome-pav">Pavilhão 7</p>
-                <button type="button" class="setor" data-setor="medicinal"><strong>Medicinal</strong><span class="conta"></span></button>
-                <button type="button" class="setor" data-setor="plural-a"><strong>Plural A</strong><span class="conta"></span></button>
-                <button type="button" class="setor" data-setor="plural-b"><strong>Plural B</strong><span class="conta"></span></button>
-                <button type="button" class="setor" data-setor="plural-c"><strong>Plural C</strong><span class="conta"></span></button>
-              </div>
-              <button type="button" class="setor cultural" data-setor="cultural"><strong>Pavilhão Cultural</strong><span class="conta"></span><span class="conta">setor das artes</span></button>
-              <button type="button" class="setor p8" data-setor="cbh"><strong>Pavilhão 8</strong><span class="conta">Business Hub · 18 nov</span></button>
-              <button type="button" class="setor externa" data-setor="externa"><strong>Área Externa</strong><span class="conta"></span></button>
-            </div>
-            <p class="dica">Toque num setor para ver quem está nele. Toque de novo para ver todos.</p>
-          </div>
+        <div class="planta-spe" tabindex="0" aria-label="Planta simplificada do São Paulo Expo. No celular, role para o lado.">
+          <svg viewBox="0 50 1000 345" role="img" aria-labelledby="planta-titulo planta-desc">
+            <title id="planta-titulo">Planta simplificada do Centro de Exposições do São Paulo Expo</title>
+            <desc id="planta-desc">Da esquerda (oeste) para a direita (leste): Pavilhão 8, Pavilhão 7, Pavilhões 6 a 1 e o Edifício Garagem. A ExpoCannabis usa os Pavilhões 7 e 8.</desc>
+            <text class="ponto" x="37" y="76">← OESTE</text>
+            <text class="ponto" x="963" y="76" text-anchor="end">LESTE →</text>
 
-          <aside class="cartao" id="setor-info" aria-live="polite"></aside>
+            <rect class="pav cbh" x="37" y="210" width="104" height="90"/>
+            <text class="num" x="89" y="270">8</text>
+            <rect class="pav feira" x="141" y="164" width="150" height="136"/>
+            <text class="num" x="216" y="244">7</text>
+            <text class="area" x="216" y="276">10.962 m²</text>
+
+            <g class="outros">
+              <rect class="pav" x="291" y="156" width="91" height="144"/><text class="num-p" x="336" y="238">6</text>
+              <rect class="pav" x="382" y="136" width="110" height="164"/><text class="num-p" x="437" y="228">5</text>
+              <rect class="pav" x="492" y="136" width="90" height="164"/><text class="num-p" x="537" y="228">4</text>
+              <rect class="pav" x="582" y="136" width="88" height="164"/><text class="num-p" x="626" y="228">3</text>
+              <rect class="pav" x="670" y="86" width="89" height="214"/><text class="num-p" x="714" y="203">2</text>
+              <rect class="pav" x="759" y="86" width="116" height="214"/><text class="num-p" x="817" y="203">1</text>
+            </g>
+            <rect class="garagem" x="894" y="150" width="69" height="150"/>
+            <text class="p-icone" x="928" y="240">P</text>
+
+            <text class="rot forte" x="84" y="334">Pavilhão 8</text>
+            <text class="rot" x="89" y="358">Business Hub</text>
+            <text class="rot" x="89" y="380">só 18/11</text>
+            <text class="rot forte vermelho" x="222" y="334">Pavilhão 7</text>
+            <text class="rot" x="216" y="358">a feira</text>
+            <text class="rot" x="583" y="334">Pavilhões 1 a 6: outros eventos</text>
+            <text class="rot forte" x="928" y="334">Garagem</text>
+            <text class="rot" x="928" y="358">6.500 vagas</text>
+          </svg>
         </div>
+        <p class="dica">Desenho simplificado, com as medidas da <a href="https://www.saopauloexpo.com.br/pt/wp-content/uploads/2025/06/Tabelas_Infos-Tecnicas-SPE_EXPOSICOES.pdf" target="_blank" rel="noopener">ficha técnica oficial do São Paulo Expo</a> (PDF). No celular, arraste o desenho para o lado.</p>
+
+        <div class="grade g3" style="margin-top:28px">
+          <article class="cartao">
+            <p class="rotulo">Pavilhão 7 · a feira</p>
+            <h3>Medicinal e Plural A, B e C</h3>
+            <p>10.962 m², 108 × 120 m, 10 m de pé-direito e 49 sanitários. É onde está a maior parte dos expositores.</p>
+          </article>
+          <article class="cartao">
+            <p class="rotulo">Pavilhão 8 · 18 de novembro</p>
+            <h3>Cannabis Business Hub</h3>
+            <p>4.176 m². Rodada de negócios na quarta, 18/11, das 14h às 19h, com <a href="https://www.sympla.com.br/cannabis-business-hub-4-edio__3380361" target="_blank" rel="noopener">ingresso separado</a>.</p>
+          </article>
+          <article class="cartao">
+            <p class="rotulo">Ainda sem endereço exato</p>
+            <h3>Pavilhão Cultural e Área Externa</h3>
+            <p>A organização confirma os dois espaços, mas ainda não divulgou onde ficam no complexo. Atualizamos aqui assim que sair.</p>
+          </article>
+        </div>
+        <p class="aviso" id="estande-acucarte" style="margin-top:24px"></p>
       </div>
     </section>
 
-    <section class="branca">
+    <section class="branca" id="setores-secao">
+      <div class="wrap">
+        <p class="rotulo">Setores</p>
+        <h2>Quem está em cada setor</h2>
+        <hr class="fio">
+        <p class="mudo">A organização divulgou o setor e o número de estande de cada expositor, mas não a posição dos setores dentro dos pavilhões.</p>
+        <div class="setores" id="setores"></div>
+      </div>
+    </section>
+
+    <section id="expositores">
       <div class="wrap">
         <p class="rotulo">Lista oficial</p>
         <h2>Expositores</h2>
@@ -78,36 +131,61 @@
       </div>
     </section>
 
+    <section class="branca">
+      <div class="wrap">
+        <p class="rotulo">Programação</p>
+        <h2>Palestras, lançamentos e Business Hub</h2>
+        <hr class="fio">
+        <p>A programação de conteúdo começa às 13h nos três dias e tem quatro espaços: <strong>Fórum Internacional</strong>, <strong>Congresso Científico Dr. Elisaldo Carlini</strong> (cannabis medicinal), <strong>Arena do Conhecimento</strong> e <strong>Lounge Literário</strong>. Shows e oficinas ainda não foram anunciados.</p>
+        <div class="botoes">
+          <a class="btn" href="https://expocannabisbrasil.com/programacao/" target="_blank" rel="noopener">Ver a programação oficial</a>
+          <a class="btn contorno" href="https://www.sympla.com.br/evento/expocannabis-brasil-2026-4-edicao/3217542" target="_blank" rel="noopener">Ingressos na Sympla</a>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrap">
         <p class="rotulo">Antes de ir</p>
-        <h2>Como chegar e se organizar</h2>
+        <h2>Como chegar</h2>
         <hr class="fio">
-        <div class="grade g3">
+        <p>Endereço: <strong>Rodovia dos Imigrantes, km 1,5, Vila Água Funda, São Paulo</strong>. Fica a 10 minutos do Aeroporto de Congonhas e fora do rodízio de carros.</p>
+        <div class="grade g2" style="margin-top:20px">
           <article class="cartao">
-            <h3>Endereço</h3>
-            <p>São Paulo Expo · Rodovia dos Imigrantes, km 1,5, Água Funda, São Paulo.</p>
-            <p><a href="https://www.saopauloexpo.com.br/pt/localizacao/" target="_blank" rel="noopener">Como chegar, no site do São Paulo Expo</a></p>
+            <h3>Traslado gratuito da feira</h3>
+            <p>A ExpoCannabis oferece traslado gratuito entre a <strong>estação Santos-Imigrantes do metrô (Linha 2, verde)</strong> e a feira, das 10h30 às 21h.</p>
           </article>
           <article class="cartao">
-            <h3>Transporte</h3>
-            <p>Metrô <strong>Jabaquara</strong> (linha 1, azul). De lá são cerca de 900 m a pé, ou o ônibus <strong>605A-10</strong> (Centro Paralímpico), na plataforma A do terminal da EMTU. Há estacionamento coberto e bicicletário gratuito (leve o cadeado).</p>
+            <h3>Metrô Jabaquara</h3>
+            <p>Da estação <strong>Jabaquara (Linha 1, azul)</strong> são cerca de 900 m a pé, ou o ônibus <strong>605A-10 Centro Paralímpico</strong>, na plataforma A do terminal da EMTU.</p>
           </article>
           <article class="cartao">
-            <h3>Ingressos e programação</h3>
-            <p>Ingressos na Sympla. Palestras, oficinas, shows e horários ficam no site oficial.</p>
-            <div class="botoes" style="margin-top:12px">
-              <a class="btn sm" href="https://www.sympla.com.br/evento/expocannabis-brasil-2026-4-edicao/3217542" target="_blank" rel="noopener">Ingressos</a>
-              <a class="btn sm contorno" href="https://expocannabisbrasil.com/" target="_blank" rel="noopener">Site oficial</a>
-            </div>
+            <h3>Carro</h3>
+            <p>Estacionamento coberto da Indigo, com mais de 6.500 vagas e passarela até os pavilhões. A garagem fica na ponta leste: até o Pavilhão 7 é uma boa caminhada. O preço muda por evento; confira no local.</p>
+          </article>
+          <article class="cartao">
+            <h3>Bicicleta e aplicativo</h3>
+            <p>Bicicletário gratuito com 430 vagas (leve o cadeado). Táxi e aplicativo só nos pontos oficiais de embarque.</p>
           </article>
         </div>
         <h3 style="margin-top:40px">Dicas para artistas</h3>
         <ul>
-          <li>O <strong>Pavilhão Cultural</strong> concentra arte em vidro, artesanato, moda e cultura. É onde vale começar a circular e fazer contatos.</li>
-          <li>Leve fotos dos trabalhos já com a sua marca d'água (<a href="../marca-dagua/" target="_blank" rel="noopener">ferramenta gratuita</a>) e o @ bem à vista no estande ou no cartão.</li>
-          <li>Anote o número dos estandes que quer visitar: nesta página, procure pelo nome ou pelo @.</li>
+          <li>O <strong>Pavilhão Cultural</strong> reúne arte em vidro, artesanato, moda e cultura: é por onde vale começar a circular.</li>
+          <li>Leve fotos dos trabalhos já com a sua marca d'água (<a href="../marca-dagua/" target="_blank" rel="noopener">ferramenta gratuita</a>) e o @ bem à vista.</li>
+          <li>Anote os estandes que quer visitar: procure pelo nome ou pelo @ na lista acima.</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="branca">
+      <div class="wrap">
+        <h2 style="font-size:1.4rem">Fontes</h2>
+        <ul class="mudo">
+          <li>ExpoCannabis Brasil: <a href="https://expocannabisbrasil.com/" target="_blank" rel="noopener">site oficial</a>, <a href="https://expocannabisbrasil.com/sobre/" target="_blank" rel="noopener">sobre</a> (idade mínima e traslado), <a href="https://expocannabisbrasil.com/expositores/" target="_blank" rel="noopener">expositores</a>, <a href="https://expocannabisbrasil.com/programacao/" target="_blank" rel="noopener">programação</a> e <a href="https://expocannabisbrasil.com/cbhbrasil/" target="_blank" rel="noopener">Business Hub</a>.</li>
+          <li>Sympla: <a href="https://www.sympla.com.br/evento/expocannabis-brasil-2026-4-edicao/3217542" target="_blank" rel="noopener">página de ingressos</a> (horário de 11h às 20h).</li>
+          <li>São Paulo Expo: <a href="https://www.saopauloexpo.com.br/pt/wp-content/uploads/2025/06/Tabelas_Infos-Tecnicas-SPE_EXPOSICOES.pdf" target="_blank" rel="noopener">tabelas e informações técnicas do Centro de Exposições</a>, <a href="https://www.saopauloexpo.com.br/pt/evento-spe/expocannabis-brasil/" target="_blank" rel="noopener">página do evento</a>, <a href="https://www.saopauloexpo.com.br/pt/localizacao/" target="_blank" rel="noopener">localização</a> e <a href="https://www.saopauloexpo.com.br/pt/estacionamento-visitante/" target="_blank" rel="noopener">estacionamento</a>.</li>
+        </ul>
+        <p class="mudo">Dados conferidos em 29 de outubro de 2026. A organização pode mudar estandes e horários até a feira.</p>
       </div>
     </section>
   </main>
@@ -121,6 +199,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/expocannabis.js?v=202610291100" defer></script>
+  <script src="../assets/js/expocannabis.js?v=202610291111" defer></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
  "site": "https://expocannabisbrasil.com/",
  "ingressos": "https://www.sympla.com.br/evento/expocannabis-brasil-2026-4-edicao/3217542",
  "fonte_expositores": "https://expocannabisbrasil.com/expositores/",
- "atualizado_em": "2026-10-27",
+ "atualizado_em": "2026-10-29",
  "planta_oficial": null,
  "estande_acucarte": null,
  "setores": {
@@ -31,18 +31,13 @@
   },
   "cultural": {
    "nome": "Pavilhão Cultural",
-   "onde": "Pavilhão Cultural",
+   "onde": "Local no complexo ainda não divulgado",
    "descricao": "Arte, vidro, artesanato, moda e cultura canábica. É o setor mais próximo do trabalho dos artistas."
   },
   "externa": {
    "nome": "Área Externa",
-   "onde": "Área Externa",
-   "descricao": "Arquibancada, lotes ao ar livre e ativações de marca."
-  },
-  "cbh": {
-   "nome": "Cannabis Business Hub",
-   "onde": "Pavilhão 8",
-   "descricao": "Rodada de negócios em 18 de novembro, das 14h às 19h, antes da feira."
+   "onde": "Fora dos pavilhões · local exato ainda não divulgado",
+   "descricao": "Arquibancada, lotes ao ar livre (códigos L.M e L.O) e ativações de marca."
   }
  },
  "expositores": [
@@ -1151,5 +1146,9 @@
    "estande": "225, 226",
    "instagram": "@o_ki_cookie"
   }
- ]
+ ],
+ "fontes_local": {
+  "planta_spe": "https://www.saopauloexpo.com.br/pt/wp-content/uploads/2025/06/Tabelas_Infos-Tecnicas-SPE_EXPOSICOES.pdf",
+  "evento_spe": "https://www.saopauloexpo.com.br/pt/evento-spe/expocannabis-brasil/"
+ }
 }
