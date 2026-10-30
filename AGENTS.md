@@ -35,7 +35,7 @@ gratuitas para artistas. Publicado em https://acuca-sp.github.io a partir da bra
 | `tests/marca-dagua.html` | Teste da marca d'água no navegador: mexe em todas as opções e confere os pixels das fotos baixadas (70 verificações) |
 | `assets/img/marca-dagua/` | Exemplos da página inicial, gerados na própria ferramenta |
 | `expocannabis/` + `assets/js/expocannabis.js` | Mapa da ExpoCannabis 2026: planta simplificada do São Paulo Expo (medidas da ficha técnica oficial), cartões dos setores e busca de expositores |
-| `letramento/` | Seção Autogestão e letramento digital: índice dos artigos e um artigo por pasta (`letramento/<slug>/index.html`) |
+| `letramento/` | Seção Autogestão e letramento digital: índice dos artigos e um artigo por pasta (`letramento/<slug>/index.html`). **Oculta desde 30/10/2026:** sem link no menu nem na página inicial (a seção está comentada em `index.html`) e com `noindex`. Só reativar quando a ACuCa pedir. |
 | `data/expocannabis.json` | Setores, expositores e estandes copiados da lista oficial (`fonte_expositores`, `atualizado_em`). `planta_oficial` e `estande_acucarte` ficam `null` até a organização publicar |
 
 ## Verificar antes de publicar
