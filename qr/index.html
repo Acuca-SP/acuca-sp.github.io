@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR codes dos artistas · ACUCARTE</title>
+  <meta name="description" content="Catálogo dos QR codes de cada artista da ACUCARTE. Cada código leva à página do artista no site acucarte.com.br.">
+  <link rel="icon" href="../assets/img/simbolo-acuca.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400;1,600;1,700&family=Montserrat:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css?v=202610291748">
+  <style>
+    .qr-topo { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:24px; }
+    .qr-topo input { flex:1 1 240px; padding:12px 16px; border:1px solid #ccc; border-radius:999px; font:inherit; }
+    .qr-grade { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:20px; margin-top:28px; }
+    .qr-cartao { background:#fff; border:1px solid #e4e0ea; border-radius:16px; padding:20px 16px; text-align:center; break-inside:avoid; }
+    .qr-img img { width:160px; height:160px; display:block; margin:0 auto; image-rendering:pixelated; }
+    .qr-cartao h3 { margin:14px 0 4px; font-size:17px; }
+    .qr-url { margin:0; font-size:12px; color:#777; word-break:break-all; }
+    .qr-baixar { margin:8px 0 0; font-size:14px; font-weight:700; }
+    .qr-vazio { display:none; margin-top:24px; }
+    @media print {
+      .topo, .rodape, .pular, .qr-topo, .qr-baixar, .cabeca p { display:none !important; }
+      .cabeca { padding:0 !important; background:none !important; color:#000 !important; }
+      .qr-grade { grid-template-columns:repeat(4,1fr); gap:10px; }
+      .qr-cartao { border:1px solid #bbb; padding:10px; }
+      .qr-img img { width:130px; height:130px; }
+      section { padding-top:10px !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="wrap">
+      <a class="marca" href="../"><img src="../assets/img/logo-acucarte-claro.png" alt="ACUCARTE" width="910" height="122"></a>
+      <nav aria-label="Principal">
+        <a href="../#acuca">ACuCa</a>
+        <a href="../#acucarte">ACUCARTE</a>
+        <a href="../#ferramentas">Ferramentas</a>
+        <a href="../prompts/">Guia de prompts</a>
+        <a href="../marca-dagua/">Marca d'água</a>
+        <a href="../expocannabis/">Mapa da Expo</a>
+        <a href="./" aria-current="page">QR dos artistas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="cabeca">
+      <div class="wrap">
+        <h1>QR codes dos artistas</h1>
+        <p>23 artistas da ACUCARTE. Cada QR leva à página do artista no site, com bio, Instagram e as obras à venda. Baixe em PNG para redes e etiquetas, ou em SVG para impressão em qualquer tamanho.</p>
+      </div>
+    </div>
+
+    <section style="padding-top:32px">
+      <div class="wrap">
+        <div class="qr-topo">
+          <label class="sr-only" for="busca-qr">Buscar artista</label>
+          <input id="busca-qr" type="search" placeholder="Buscar artista" autocomplete="off">
+          <button class="btn" type="button" onclick="window.print()">Imprimir todos</button>
+        </div>
+        <div class="qr-grade" id="grade-qr">
+          <article class="qr-cartao" data-nome="alfamor alfamor">
+            <a class="qr-img" href="https://acucarte.com.br/alfamor" target="_blank" rel="noopener" title="Abrir a página de Alfamor"><img src="img/alfamor.svg" alt="QR code da página de Alfamor no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Alfamor</h3>
+            <p class="qr-url">acucarte.com.br/qr/alfamor</p>
+            <p class="qr-baixar"><a href="img/alfamor.png" download="qr-alfamor.png">PNG</a> · <a href="img/alfamor.svg" download="qr-alfamor.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="amanita embroidery amanita-embroidery">
+            <a class="qr-img" href="https://acucarte.com.br/amanita-embroidery" target="_blank" rel="noopener" title="Abrir a página de Amanita Embroidery"><img src="img/amanita-embroidery.svg" alt="QR code da página de Amanita Embroidery no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Amanita Embroidery</h3>
+            <p class="qr-url">acucarte.com.br/qr/amanita-embroidery</p>
+            <p class="qr-baixar"><a href="img/amanita-embroidery.png" download="qr-amanita-embroidery.png">PNG</a> · <a href="img/amanita-embroidery.svg" download="qr-amanita-embroidery.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="arte_brisa arte-brisa">
+            <a class="qr-img" href="https://acucarte.com.br/arte-brisa" target="_blank" rel="noopener" title="Abrir a página de Arte_Brisa"><img src="img/arte-brisa.svg" alt="QR code da página de Arte_Brisa no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Arte_Brisa</h3>
+            <p class="qr-url">acucarte.com.br/qr/arte-brisa</p>
+            <p class="qr-baixar"><a href="img/arte-brisa.png" download="qr-arte-brisa.png">PNG</a> · <a href="img/arte-brisa.svg" download="qr-arte-brisa.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="cabeleira paranga cabeleira-paranga">
+            <a class="qr-img" href="https://acucarte.com.br/cabeleira-paranga" target="_blank" rel="noopener" title="Abrir a página de Cabeleira Paranga"><img src="img/cabeleira-paranga.svg" alt="QR code da página de Cabeleira Paranga no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Cabeleira Paranga</h3>
+            <p class="qr-url">acucarte.com.br/qr/cabeleira-paranga</p>
+            <p class="qr-baixar"><a href="img/cabeleira-paranga.png" download="qr-cabeleira-paranga.png">PNG</a> · <a href="img/cabeleira-paranga.svg" download="qr-cabeleira-paranga.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="caio - ganjahart420 caio-ganjahart420">
+            <a class="qr-img" href="https://acucarte.com.br/caio-ganjahart420" target="_blank" rel="noopener" title="Abrir a página de Caio - Ganjahart420"><img src="img/caio-ganjahart420.svg" alt="QR code da página de Caio - Ganjahart420 no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Caio - Ganjahart420</h3>
+            <p class="qr-url">acucarte.com.br/qr/caio-ganjahart420</p>
+            <p class="qr-baixar"><a href="img/caio-ganjahart420.png" download="qr-caio-ganjahart420.png">PNG</a> · <a href="img/caio-ganjahart420.svg" download="qr-caio-ganjahart420.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="elarafaela elarafaela">
+            <a class="qr-img" href="https://acucarte.com.br/elarafaela" target="_blank" rel="noopener" title="Abrir a página de ElaRafaela"><img src="img/elarafaela.svg" alt="QR code da página de ElaRafaela no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>ElaRafaela</h3>
+            <p class="qr-url">acucarte.com.br/qr/elarafaela</p>
+            <p class="qr-baixar"><a href="img/elarafaela.png" download="qr-elarafaela.png">PNG</a> · <a href="img/elarafaela.svg" download="qr-elarafaela.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="elementalazul elementalazul">
+            <a class="qr-img" href="https://acucarte.com.br/elementalazul" target="_blank" rel="noopener" title="Abrir a página de Elementalazul"><img src="img/elementalazul.svg" alt="QR code da página de Elementalazul no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Elementalazul</h3>
+            <p class="qr-url">acucarte.com.br/qr/elementalazul</p>
+            <p class="qr-baixar"><a href="img/elementalazul.png" download="qr-elementalazul.png">PNG</a> · <a href="img/elementalazul.svg" download="qr-elementalazul.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="elle.art elle-art">
+            <a class="qr-img" href="https://acucarte.com.br/elle-art" target="_blank" rel="noopener" title="Abrir a página de Elle.Art"><img src="img/elle-art.svg" alt="QR code da página de Elle.Art no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Elle.Art</h3>
+            <p class="qr-url">acucarte.com.br/qr/elle-art</p>
+            <p class="qr-baixar"><a href="img/elle-art.png" download="qr-elle-art.png">PNG</a> · <a href="img/elle-art.svg" download="qr-elle-art.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="florista 420 florista-420">
+            <a class="qr-img" href="https://acucarte.com.br/florista-420" target="_blank" rel="noopener" title="Abrir a página de Florista 420"><img src="img/florista-420.svg" alt="QR code da página de Florista 420 no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Florista 420</h3>
+            <p class="qr-url">acucarte.com.br/qr/florista-420</p>
+            <p class="qr-baixar"><a href="img/florista-420.png" download="qr-florista-420.png">PNG</a> · <a href="img/florista-420.svg" download="qr-florista-420.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="gustavo dainezi gustavo-dainezi">
+            <a class="qr-img" href="https://acucarte.com.br/gustavo-dainezi" target="_blank" rel="noopener" title="Abrir a página de Gustavo Dainezi"><img src="img/gustavo-dainezi.svg" alt="QR code da página de Gustavo Dainezi no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Gustavo Dainezi</h3>
+            <p class="qr-url">acucarte.com.br/qr/gustavo-dainezi</p>
+            <p class="qr-baixar"><a href="img/gustavo-dainezi.png" download="qr-gustavo-dainezi.png">PNG</a> · <a href="img/gustavo-dainezi.svg" download="qr-gustavo-dainezi.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="hempart705 hempart705">
+            <a class="qr-img" href="https://acucarte.com.br/hempart705" target="_blank" rel="noopener" title="Abrir a página de Hempart705"><img src="img/hempart705.svg" alt="QR code da página de Hempart705 no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Hempart705</h3>
+            <p class="qr-url">acucarte.com.br/qr/hempart705</p>
+            <p class="qr-baixar"><a href="img/hempart705.png" download="qr-hempart705.png">PNG</a> · <a href="img/hempart705.svg" download="qr-hempart705.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="ieva martinaitis ieva-martinaitis">
+            <a class="qr-img" href="https://acucarte.com.br/ieva-martinaitis" target="_blank" rel="noopener" title="Abrir a página de Ieva martinaitis"><img src="img/ieva-martinaitis.svg" alt="QR code da página de Ieva martinaitis no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Ieva martinaitis</h3>
+            <p class="qr-url">acucarte.com.br/qr/ieva-martinaitis</p>
+            <p class="qr-baixar"><a href="img/ieva-martinaitis.png" download="qr-ieva-martinaitis.png">PNG</a> · <a href="img/ieva-martinaitis.svg" download="qr-ieva-martinaitis.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="jgs arts arteira-jessica">
+            <a class="qr-img" href="https://acucarte.com.br/arteira-jessica" target="_blank" rel="noopener" title="Abrir a página de JGS Arts"><img src="img/arteira-jessica.svg" alt="QR code da página de JGS Arts no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>JGS Arts</h3>
+            <p class="qr-url">acucarte.com.br/qr/arteira-jessica</p>
+            <p class="qr-baixar"><a href="img/arteira-jessica.png" download="qr-arteira-jessica.png">PNG</a> · <a href="img/arteira-jessica.svg" download="qr-arteira-jessica.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="karymy gonçalves karymy-goncalves">
+            <a class="qr-img" href="https://acucarte.com.br/karymy-goncalves" target="_blank" rel="noopener" title="Abrir a página de Karymy Gonçalves"><img src="img/karymy-goncalves.svg" alt="QR code da página de Karymy Gonçalves no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Karymy Gonçalves</h3>
+            <p class="qr-url">acucarte.com.br/qr/karymy-goncalves</p>
+            <p class="qr-baixar"><a href="img/karymy-goncalves.png" download="qr-karymy-goncalves.png">PNG</a> · <a href="img/karymy-goncalves.svg" download="qr-karymy-goncalves.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="kons - affektuell kons-affektuell">
+            <a class="qr-img" href="https://acucarte.com.br/kons-affektuell" target="_blank" rel="noopener" title="Abrir a página de Kons - Affektuell"><img src="img/kons-affektuell.svg" alt="QR code da página de Kons - Affektuell no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Kons - Affektuell</h3>
+            <p class="qr-url">acucarte.com.br/qr/kons-affektuell</p>
+            <p class="qr-baixar"><a href="img/kons-affektuell.png" download="qr-kons-affektuell.png">PNG</a> · <a href="img/kons-affektuell.svg" download="qr-kons-affektuell.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="luis só luis-so">
+            <a class="qr-img" href="https://acucarte.com.br/luis-so" target="_blank" rel="noopener" title="Abrir a página de Luis Só"><img src="img/luis-so.svg" alt="QR code da página de Luis Só no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Luis Só</h3>
+            <p class="qr-url">acucarte.com.br/qr/luis-so</p>
+            <p class="qr-baixar"><a href="img/luis-so.png" download="qr-luis-so.png">PNG</a> · <a href="img/luis-so.svg" download="qr-luis-so.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="luiz fernando petty luiz-fernando-petty">
+            <a class="qr-img" href="https://acucarte.com.br/luiz-fernando-petty" target="_blank" rel="noopener" title="Abrir a página de Luiz Fernando Petty"><img src="img/luiz-fernando-petty.svg" alt="QR code da página de Luiz Fernando Petty no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Luiz Fernando Petty</h3>
+            <p class="qr-url">acucarte.com.br/qr/luiz-fernando-petty</p>
+            <p class="qr-baixar"><a href="img/luiz-fernando-petty.png" download="qr-luiz-fernando-petty.png">PNG</a> · <a href="img/luiz-fernando-petty.svg" download="qr-luiz-fernando-petty.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="mari m. - come do the reggay! mari-m-come-do-the-reggay">
+            <a class="qr-img" href="https://acucarte.com.br/mari-m-come-do-the-reggay" target="_blank" rel="noopener" title="Abrir a página de Mari M. - Come Do The Reggay!"><img src="img/mari-m-come-do-the-reggay.svg" alt="QR code da página de Mari M. - Come Do The Reggay! no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Mari M. - Come Do The Reggay!</h3>
+            <p class="qr-url">acucarte.com.br/qr/mari-m-come-do-the-reggay</p>
+            <p class="qr-baixar"><a href="img/mari-m-come-do-the-reggay.png" download="qr-mari-m-come-do-the-reggay.png">PNG</a> · <a href="img/mari-m-come-do-the-reggay.svg" download="qr-mari-m-come-do-the-reggay.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="moroby moroby">
+            <a class="qr-img" href="https://acucarte.com.br/moroby" target="_blank" rel="noopener" title="Abrir a página de Moroby"><img src="img/moroby.svg" alt="QR code da página de Moroby no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Moroby</h3>
+            <p class="qr-url">acucarte.com.br/qr/moroby</p>
+            <p class="qr-baixar"><a href="img/moroby.png" download="qr-moroby.png">PNG</a> · <a href="img/moroby.svg" download="qr-moroby.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="navdo navdo">
+            <a class="qr-img" href="https://acucarte.com.br/navdo" target="_blank" rel="noopener" title="Abrir a página de NAVDO"><img src="img/navdo.svg" alt="QR code da página de NAVDO no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>NAVDO</h3>
+            <p class="qr-url">acucarte.com.br/qr/navdo</p>
+            <p class="qr-baixar"><a href="img/navdo.png" download="qr-navdo.png">PNG</a> · <a href="img/navdo.svg" download="qr-navdo.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="rebordosos rebordosos">
+            <a class="qr-img" href="https://acucarte.com.br/rebordosos" target="_blank" rel="noopener" title="Abrir a página de Rebordosos"><img src="img/rebordosos.svg" alt="QR code da página de Rebordosos no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Rebordosos</h3>
+            <p class="qr-url">acucarte.com.br/qr/rebordosos</p>
+            <p class="qr-baixar"><a href="img/rebordosos.png" download="qr-rebordosos.png">PNG</a> · <a href="img/rebordosos.svg" download="qr-rebordosos.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="su marar su-marar">
+            <a class="qr-img" href="https://acucarte.com.br/su-marar" target="_blank" rel="noopener" title="Abrir a página de Su Marar"><img src="img/su-marar.svg" alt="QR code da página de Su Marar no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Su Marar</h3>
+            <p class="qr-url">acucarte.com.br/qr/su-marar</p>
+            <p class="qr-baixar"><a href="img/su-marar.png" download="qr-su-marar.png">PNG</a> · <a href="img/su-marar.svg" download="qr-su-marar.svg">SVG</a></p>
+          </article>
+          <article class="qr-cartao" data-nome="yalonabis yalonabis">
+            <a class="qr-img" href="https://acucarte.com.br/yalonabis" target="_blank" rel="noopener" title="Abrir a página de Yalonabis"><img src="img/yalonabis.svg" alt="QR code da página de Yalonabis no site da ACUCARTE" width="160" height="160" loading="lazy"></a>
+            <h3>Yalonabis</h3>
+            <p class="qr-url">acucarte.com.br/qr/yalonabis</p>
+            <p class="qr-baixar"><a href="img/yalonabis.png" download="qr-yalonabis.png">PNG</a> · <a href="img/yalonabis.svg" download="qr-yalonabis.svg">SVG</a></p>
+          </article>
+        </div>
+        <p class="qr-vazio mudo" id="vazio-qr">Nenhum artista com esse nome.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap">
+      <img src="../assets/img/logo-acuca-branco.png" alt="ACuCa-SP" width="852" height="634">
+      <div>
+        <a href="https://instagram.com/acucasp" target="_blank" rel="noopener">@acucasp</a> · <a href="https://instagram.com/acucarte_acuca" target="_blank" rel="noopener">@acucarte_acuca</a> ·
+        <a href="https://acucarte.com.br" target="_blank" rel="noopener">acucarte.com.br</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var q = document.getElementById('busca-qr'), cards = document.querySelectorAll('.qr-cartao'), vazio = document.getElementById('vazio-qr');
+      var norm = function (s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); };
+      q.addEventListener('input', function () {
+        var t = norm(q.value.trim()), n = 0;
+        cards.forEach(function (c) { var ok = !t || norm(c.dataset.nome).indexOf(t) > -1; c.hidden = !ok; if (ok) n++; });
+        vazio.style.display = n ? 'none' : 'block';
+      });
+    })();
+  </script>
+</body>
+</html>
